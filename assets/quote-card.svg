@@ -1,0 +1,37 @@
+<svg width="850" height="95" viewBox="0 0 850 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="quote-glass-fill" x1="0" y1="0" x2="850" y2="95" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.07"/>
+      <stop offset="30%" stop-color="#FF7A00" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#120A06" stop-opacity="0.65"/>
+    </linearGradient>
+    <linearGradient id="quote-glass-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9E44" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FF5722" stop-opacity="0.4"/>
+    </linearGradient>
+    <filter id="quote-glow" x="-5%" y="-15%" width="110%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.45"/>
+      <feDropShadow dx="0" dy="1" stdDeviation="6" flood-color="#FF6A00" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#quote-glow)">
+    <rect x="25" y="10" width="800" height="75" rx="16" fill="url(#quote-glass-fill)"/>
+    <rect x="25" y="10" width="800" height="75" rx="16" stroke="url(#quote-glass-stroke)" stroke-width="1.2"/>
+  </g>
+
+  <!-- Quote Mark Icon -->
+  <text x="50" y="55" font-family="'Georgia', serif" font-size="44" fill="#FF7A00" opacity="0.4">“</text>
+
+  <!-- Quote Text -->
+  <text x="85" y="44" font-family="'Segoe UI', -apple-system, sans-serif" font-weight="500" font-size="14.5" fill="#FFFFFF" letter-spacing="0.2">
+    First, solve the problem. Then, write the code.
+  </text>
+  <text x="85" y="65" font-family="'Segoe UI', -apple-system, sans-serif" font-weight="400" font-size="12" fill="#FFA726">
+    — John Johnson
+  </text>
+  <text x="795" y="52" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" fill="#D7C4B7" opacity="0.6" text-anchor="end">
+    ✨ Always striving for excellence
+  </text>
+</svg>

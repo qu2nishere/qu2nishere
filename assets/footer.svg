@@ -1,0 +1,39 @@
+<svg width="850" height="90" viewBox="0 0 850 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="footer-fill" x1="0" y1="0" x2="850" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.06"/>
+      <stop offset="50%" stop-color="#FF7A00" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#120A06" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="footer-stroke" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6A00" stop-opacity="0.1"/>
+      <stop offset="30%" stop-color="#FF9E44" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#FF9E44" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FF6A00" stop-opacity="0.1"/>
+    </linearGradient>
+    <radialGradient id="footer-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF6A00" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FF6A00" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <style>
+    .footer-text { font-family: 'Segoe UI', -apple-system, sans-serif; font-size: 13px; font-weight: 500; fill: #D7C4B7; text-anchor: middle; }
+    .heart-glow { fill: #FF7A00; }
+  </style>
+
+  <circle cx="425" cy="45" r="160" fill="url(#footer-glow)"/>
+
+  <!-- Pill Card -->
+  <rect x="125" y="15" width="600" height="60" rx="30" fill="url(#footer-fill)"/>
+  <rect x="125" y="15" width="600" height="60" rx="30" stroke="url(#footer-stroke)" stroke-width="1.2"/>
+
+  <!-- Content -->
+  <text x="425" y="44" class="footer-text">
+    Crafted with <tspan class="heart-glow">🧡</tspan> by <tspan fill="#FFA726" font-weight="700">Quân</tspan> (@qu2nishere) • Orange Glassmorphic Edition
+  </text>
+  <text x="425" y="60" font-family="'Consolas', monospace" font-size="10.5" fill="#8C786C" text-anchor="middle">
+    ⭐ Feel free to star this repo if you find inspiration! ⭐
+  </text>
+</svg>

@@ -1,0 +1,99 @@
+<svg width="850" height="190" viewBox="0 0 850 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Card Gradients -->
+    <linearGradient id="card-glass-fill" x1="0" y1="0" x2="250" y2="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="30%" stop-color="#FF7A00" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#120A06" stop-opacity="0.75"/>
+    </linearGradient>
+
+    <linearGradient id="card-glass-stroke" x1="0" y1="0" x2="250" y2="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF9E44" stop-opacity="0.75"/>
+      <stop offset="30%" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="70%" stop-color="#FF6A00" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#FF5722" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <linearGradient id="header-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFA726"/>
+    </linearGradient>
+
+    <filter id="card-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="8" flood-color="#FF6A00" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <style>
+    .card-title { font-family: 'Segoe UI', -apple-system, sans-serif; font-weight: 700; font-size: 15px; }
+    .card-text { font-family: 'Segoe UI', -apple-system, sans-serif; font-weight: 400; font-size: 12.5px; fill: #D1BFB3; }
+    .bullet { fill: #FF8A00; }
+  </style>
+
+  <!-- Ambient background glow patches -->
+  <circle cx="150" cy="95" r="70" fill="#FF5D00" opacity="0.12" filter="blur(20px)"/>
+  <circle cx="425" cy="95" r="70" fill="#FFA726" opacity="0.1" filter="blur(20px)"/>
+  <circle cx="700" cy="95" r="70" fill="#FF5D00" opacity="0.12" filter="blur(20px)"/>
+
+  <!-- Card 1: What I'm Doing -->
+  <g transform="translate(20, 15)" filter="url(#card-glow)">
+    <rect width="250" height="155" rx="16" fill="url(#card-glass-fill)"/>
+    <rect width="250" height="155" rx="16" stroke="url(#card-glass-stroke)" stroke-width="1.2"/>
+    <!-- Top Sheen -->
+    <path d="M 2 20 C 2 10, 10 2, 20 2 L 230 2 C 160 18, 50 25, 2 60 Z" fill="#FFFFFF" opacity="0.04"/>
+    
+    <!-- Header -->
+    <text x="20" y="34" class="card-title" fill="url(#header-accent)">🔭 CURRENT FOCUS</text>
+    
+    <!-- Items -->
+    <circle cx="24" cy="62" r="3" class="bullet"/>
+    <text x="36" y="66" class="card-text">Building modern web apps</text>
+
+    <circle cx="24" cy="92" r="3" class="bullet"/>
+    <text x="36" y="96" class="card-text">Exploring glass UI &amp; UX</text>
+
+    <circle cx="24" cy="122" r="3" class="bullet"/>
+    <text x="36" y="126" class="card-text">Active open-source learning</text>
+  </g>
+
+  <!-- Card 2: Mindset & Passion -->
+  <g transform="translate(300, 15)" filter="url(#card-glow)">
+    <rect width="250" height="155" rx="16" fill="url(#card-glass-fill)"/>
+    <rect width="250" height="155" rx="16" stroke="url(#card-glass-stroke)" stroke-width="1.2"/>
+    <path d="M 2 20 C 2 10, 10 2, 20 2 L 230 2 C 160 18, 50 25, 2 60 Z" fill="#FFFFFF" opacity="0.04"/>
+
+    <!-- Header -->
+    <text x="20" y="34" class="card-title" fill="url(#header-accent)">💡 DEV PHILOSOPHY</text>
+
+    <!-- Items -->
+    <circle cx="24" cy="62" r="3" class="bullet"/>
+    <text x="36" y="66" class="card-text">Clean, readable architecture</text>
+
+    <circle cx="24" cy="92" r="3" class="bullet"/>
+    <text x="36" y="96" class="card-text">Fast performance &amp; UX first</text>
+
+    <circle cx="24" cy="122" r="3" class="bullet"/>
+    <text x="36" y="126" class="card-text">Never stop experimenting</text>
+  </g>
+
+  <!-- Card 3: Aspirations & Goals -->
+  <g transform="translate(580, 15)" filter="url(#card-glow)">
+    <rect width="250" height="155" rx="16" fill="url(#card-glass-fill)"/>
+    <rect width="250" height="155" rx="16" stroke="url(#card-glass-stroke)" stroke-width="1.2"/>
+    <path d="M 2 20 C 2 10, 10 2, 20 2 L 230 2 C 160 18, 50 25, 2 60 Z" fill="#FFFFFF" opacity="0.04"/>
+
+    <!-- Header -->
+    <text x="20" y="34" class="card-title" fill="url(#header-accent)">🎯 2026 HORIZONS</text>
+
+    <!-- Items -->
+    <circle cx="24" cy="62" r="3" class="bullet"/>
+    <text x="36" y="66" class="card-text">Scalable cloud &amp; microservices</text>
+
+    <circle cx="24" cy="92" r="3" class="bullet"/>
+    <text x="36" y="96" class="card-text">Ship meaningful dev tools</text>
+
+    <circle cx="24" cy="122" r="3" class="bullet"/>
+    <text x="36" y="126" class="card-text">Collaborate with great teams</text>
+  </g>
+</svg>
