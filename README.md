@@ -40,8 +40,8 @@
 
   <br/><br/>
 
-  <!-- Unified Glass Stats Card (No Overlap, No Progress Bars) -->
-  <img src="assets/glass-stats.svg" alt="qu2nishere's Glass Stats" width="100%" />
+  <!-- Unified Glass Metrics Card (No Overlap, No Progress Bars, Top-Right Light Stream) -->
+  <img src="assets/glass-metrics.svg" alt="qu2nishere's Glass Metrics" width="100%" />
 
   <br/><br/>
 
