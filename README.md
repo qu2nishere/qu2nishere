@@ -40,7 +40,7 @@
 
   <br/><br/>
 
-  <!-- Modular Animated Glass Stats Dashboard -->
+  <!-- Unified Glass Stats Card (No Overlap, No Progress Bars) -->
   <img src="assets/glass-stats.svg" alt="qu2nishere's Glass Stats" width="100%" />
 
   <br/><br/>
@@ -63,18 +63,6 @@
 
   <!-- Futuristic Animated Contribution Wave & Telemetry -->
   <img src="assets/animated-activity.svg" alt="qu2nishere Animated Activity Wave" width="100%" />
-
-  <br/><br/>
-  <img src="assets/divider.svg" width="100%" />
-  <br/><br/>
-
-  <!-- ==================== CURATED TECH ARSENAL ==================== -->
-  <img src="assets/section-tech.svg" alt="Tech Arsenal Header" />
-
-  <br/><br/>
-
-  <!-- Curated Core Technologies in Floating Glass Tiles -->
-  <img src="assets/tech-stack.svg" alt="Core Tech Stack" width="100%" />
 
   <br/><br/>
   <img src="assets/divider.svg" width="100%" />

@@ -1,14 +1,14 @@
 <svg width="850" height="200" viewBox="0 0 850 200" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- Card Glass Fills -->
-    <linearGradient id="card-glass-1" x1="0" y1="0" x2="255" y2="165" gradientUnits="userSpaceOnUse">
+    <linearGradient id="card-glass-1" x1="0" y1="0" x2="254" y2="165" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.10"/>
       <stop offset="30%" stop-color="#FF7A00" stop-opacity="0.05"/>
       <stop offset="100%" stop-color="#120804" stop-opacity="0.80"/>
     </linearGradient>
 
     <!-- Glass Borders with Refraction Highlight -->
-    <linearGradient id="card-stroke-1" x1="0" y1="0" x2="255" y2="165" gradientUnits="userSpaceOnUse">
+    <linearGradient id="card-stroke-1" x1="0" y1="0" x2="254" y2="165" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#FFA845" stop-opacity="0.9"/>
       <stop offset="30%" stop-color="#FFFFFF" stop-opacity="0.35"/>
       <stop offset="70%" stop-color="#FF6A00" stop-opacity="0.2"/>
@@ -62,84 +62,90 @@
   <circle cx="425" cy="100" r="70" fill="#FFA726" opacity="0.15" filter="blur(20px)"/>
   <circle cx="700" cy="100" r="70" fill="#FF5D00" opacity="0.18" filter="blur(20px)"/>
 
-  <!-- Island 1: Current Focus -->
-  <g class="island-1" transform="translate(18, 12)" filter="url(#float-shadow)">
-    <rect width="254" height="165" rx="18" fill="url(#card-glass-1)"/>
-    <rect width="254" height="165" rx="18" stroke="url(#card-stroke-1)" stroke-width="1.3"/>
-    
-    <!-- Shimmer -->
-    <g clip-path="url(#clip1)">
-      <clipPath id="clip1"><rect width="254" height="165" rx="18"/></clipPath>
-      <rect class="shimmer-anim-1" width="90" height="165" fill="url(#shimmer)"/>
+  <!-- Island 1: Current Focus (Nested to avoid CSS transform overriding translation) -->
+  <g transform="translate(18, 12)">
+    <g class="island-1" filter="url(#float-shadow)">
+      <rect width="254" height="165" rx="18" fill="url(#card-glass-1)"/>
+      <rect width="254" height="165" rx="18" stroke="url(#card-stroke-1)" stroke-width="1.3"/>
+      
+      <!-- Shimmer -->
+      <g clip-path="url(#clip1)">
+        <clipPath id="clip1"><rect width="254" height="165" rx="18"/></clipPath>
+        <rect class="shimmer-anim-1" width="90" height="165" fill="url(#shimmer)"/>
+      </g>
+
+      <!-- Header -->
+      <circle cx="28" cy="32" r="5" fill="#FF7A00"/>
+      <text x="40" y="36" class="card-head">🔭 CURRENT FOCUS</text>
+      <line x1="22" y1="52" x2="232" y2="52" stroke="#FF7A00" stroke-opacity="0.2" stroke-width="1"/>
+
+      <!-- Bullets -->
+      <circle cx="28" cy="74" r="3" class="card-icon"/>
+      <text x="40" y="78" class="card-body">High-speed Web Applications</text>
+
+      <circle cx="28" cy="106" r="3" class="card-icon"/>
+      <text x="40" y="110" class="card-body">Sleek Glassmorphic UI/UX</text>
+
+      <circle cx="28" cy="138" r="3" class="card-icon"/>
+      <text x="40" y="142" class="card-body">Modern Full-Stack Patterns</text>
     </g>
-
-    <!-- Header -->
-    <circle cx="28" cy="32" r="5" fill="#FF7A00"/>
-    <text x="40" y="36" class="card-head">🔭 CURRENT FOCUS</text>
-    <line x1="22" y1="52" x2="232" y2="52" stroke="#FF7A00" stroke-opacity="0.2" stroke-width="1"/>
-
-    <!-- Bullets -->
-    <circle cx="28" cy="74" r="3" class="card-icon"/>
-    <text x="40" y="78" class="card-body">High-speed Web Applications</text>
-
-    <circle cx="28" cy="106" r="3" class="card-icon"/>
-    <text x="40" y="110" class="card-body">Sleek Glassmorphic UI/UX</text>
-
-    <circle cx="28" cy="138" r="3" class="card-icon"/>
-    <text x="40" y="142" class="card-body">Modern Full-Stack Patterns</text>
   </g>
 
   <!-- Island 2: Dev Philosophy -->
-  <g class="island-2" transform="translate(298, 12)" filter="url(#float-shadow)">
-    <rect width="254" height="165" rx="18" fill="url(#card-glass-1)"/>
-    <rect width="254" height="165" rx="18" stroke="url(#card-stroke-1)" stroke-width="1.3"/>
+  <g transform="translate(298, 12)">
+    <g class="island-2" filter="url(#float-shadow)">
+      <rect width="254" height="165" rx="18" fill="url(#card-glass-1)"/>
+      <rect width="254" height="165" rx="18" stroke="url(#card-stroke-1)" stroke-width="1.3"/>
 
-    <!-- Shimmer -->
-    <g clip-path="url(#clip2)">
-      <clipPath id="clip2"><rect width="254" height="165" rx="18"/></clipPath>
-      <rect class="shimmer-anim-2" width="90" height="165" fill="url(#shimmer)"/>
+      <!-- Shimmer -->
+      <g clip-path="url(#clip2)">
+        <clipPath id="clip2"><rect width="254" height="165" rx="18"/></clipPath>
+        <rect class="shimmer-anim-2" width="90" height="165" fill="url(#shimmer)"/>
+      </g>
+
+      <!-- Header -->
+      <circle cx="28" cy="32" r="5" fill="#FFA726"/>
+      <text x="40" y="36" class="card-head">💡 DEV PHILOSOPHY</text>
+      <line x1="22" y1="52" x2="232" y2="52" stroke="#FFA726" stroke-opacity="0.2" stroke-width="1"/>
+
+      <!-- Bullets -->
+      <circle cx="28" cy="74" r="3" class="card-icon"/>
+      <text x="40" y="78" class="card-body">Clean &amp; Maintainable Code</text>
+
+      <circle cx="28" cy="106" r="3" class="card-icon"/>
+      <text x="40" y="110" class="card-body">Performance &amp; User Experience</text>
+
+      <circle cx="28" cy="138" r="3" class="card-icon"/>
+      <text x="40" y="142" class="card-body">Constantly Pushing Boundaries</text>
     </g>
-
-    <!-- Header -->
-    <circle cx="28" cy="32" r="5" fill="#FFA726"/>
-    <text x="40" y="36" class="card-head">💡 DEV PHILOSOPHY</text>
-    <line x1="22" y1="52" x2="232" y2="52" stroke="#FFA726" stroke-opacity="0.2" stroke-width="1"/>
-
-    <!-- Bullets -->
-    <circle cx="28" cy="74" r="3" class="card-icon"/>
-    <text x="40" y="78" class="card-body">Clean &amp; Maintainable Code</text>
-
-    <circle cx="28" cy="106" r="3" class="card-icon"/>
-    <text x="40" y="110" class="card-body">Performance &amp; User Experience</text>
-
-    <circle cx="28" cy="138" r="3" class="card-icon"/>
-    <text x="40" y="142" class="card-body">Constantly Pushing Boundaries</text>
   </g>
 
   <!-- Island 3: 2026 Horizons -->
-  <g class="island-3" transform="translate(578, 12)" filter="url(#float-shadow)">
-    <rect width="254" height="165" rx="18" fill="url(#card-glass-1)"/>
-    <rect width="254" height="165" rx="18" stroke="url(#card-stroke-1)" stroke-width="1.3"/>
+  <g transform="translate(578, 12)">
+    <g class="island-3" filter="url(#float-shadow)">
+      <rect width="254" height="165" rx="18" fill="url(#card-glass-1)"/>
+      <rect width="254" height="165" rx="18" stroke="url(#card-stroke-1)" stroke-width="1.3"/>
 
-    <!-- Shimmer -->
-    <g clip-path="url(#clip3)">
-      <clipPath id="clip3"><rect width="254" height="165" rx="18"/></clipPath>
-      <rect class="shimmer-anim-3" width="90" height="165" fill="url(#shimmer)"/>
+      <!-- Shimmer -->
+      <g clip-path="url(#clip3)">
+        <clipPath id="clip3"><rect width="254" height="165" rx="18"/></clipPath>
+        <rect class="shimmer-anim-3" width="90" height="165" fill="url(#shimmer)"/>
+      </g>
+
+      <!-- Header -->
+      <circle cx="28" cy="32" r="5" fill="#FF5722"/>
+      <text x="40" y="36" class="card-head">🎯 2026 HORIZONS</text>
+      <line x1="22" y1="52" x2="232" y2="52" stroke="#FF5722" stroke-opacity="0.2" stroke-width="1"/>
+
+      <!-- Bullets -->
+      <circle cx="28" cy="74" r="3" class="card-icon"/>
+      <text x="40" y="78" class="card-body">Cloud &amp; Microservices Arch</text>
+
+      <circle cx="28" cy="106" r="3" class="card-icon"/>
+      <text x="40" y="110" class="card-body">Publish Useful Dev Utilities</text>
+
+      <circle cx="28" cy="138" r="3" class="card-icon"/>
+      <text x="40" y="142" class="card-body">Collaborate Worldwide</text>
     </g>
-
-    <!-- Header -->
-    <circle cx="28" cy="32" r="5" fill="#FF5722"/>
-    <text x="40" y="36" class="card-head">🎯 2026 HORIZONS</text>
-    <line x1="22" y1="52" x2="232" y2="52" stroke="#FF5722" stroke-opacity="0.2" stroke-width="1"/>
-
-    <!-- Bullets -->
-    <circle cx="28" cy="74" r="3" class="card-icon"/>
-    <text x="40" y="78" class="card-body">Cloud &amp; Microservices Arch</text>
-
-    <circle cx="28" cy="106" r="3" class="card-icon"/>
-    <text x="40" y="110" class="card-body">Publish Useful Dev Utilities</text>
-
-    <circle cx="28" cy="138" r="3" class="card-icon"/>
-    <text x="40" y="142" class="card-body">Collaborate Worldwide</text>
   </g>
 </svg>
