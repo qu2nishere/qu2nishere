@@ -1,0 +1,161 @@
+<svg width="850" height="210" viewBox="0 0 850 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="act-glass-fill" x1="0" y1="0" x2="810" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="30%" stop-color="#FF7A00" stop-opacity="0.04"/>
+      <stop offset="70%" stop-color="#140A05" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0A0402" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <linearGradient id="act-glass-stroke" x1="0" y1="0" x2="810" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFB366" stop-opacity="0.85"/>
+      <stop offset="25%" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#FF6A00" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FF5722" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <linearGradient id="bar-gradient" x1="0" y1="100%" x2="0" y2="0%">
+      <stop offset="0%" stop-color="#FF5D00" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#FF8A00" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FFE082" stop-opacity="1"/>
+    </linearGradient>
+
+    <linearGradient id="wave-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF5D00" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#FFA726" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FF5D00" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <filter id="act-shadow" x="-5%" y="-10%" width="110%" height="125%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="12" flood-color="#FF6A00" flood-opacity="0.2"/>
+    </filter>
+
+    <filter id="wave-glow" x="-10%" y="-30%" width="120%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .act-title { font-family: 'Segoe UI', -apple-system, sans-serif; font-weight: 700; font-size: 14px; fill: #FFA726; letter-spacing: 0.5px; }
+    .act-sub { font-family: 'Segoe UI', -apple-system, sans-serif; font-weight: 500; font-size: 12px; fill: #D7C4B7; }
+    .metric-num { font-family: 'Segoe UI', -apple-system, sans-serif; font-weight: 800; font-size: 22px; fill: #FFFFFF; }
+    .metric-lbl { font-family: 'Segoe UI', -apple-system, sans-serif; font-size: 11px; fill: #A89488; }
+
+    @keyframes barPulse {
+      0%, 100% { transform: scaleY(0.35); }
+      50% { transform: scaleY(1); }
+    }
+    @keyframes waveDash {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -400; }
+    }
+    @keyframes glowPulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+
+    .wave-line {
+      stroke-dasharray: 8 4;
+      animation: waveDash 14s linear infinite;
+    }
+    .pulse-dot { animation: glowPulse 2s infinite ease-in-out; }
+    
+    .bar {
+      transform-origin: bottom;
+      animation: barPulse 2.4s ease-in-out infinite alternate;
+    }
+    .b1  { animation-delay: 0.0s; }
+    .b2  { animation-delay: 0.2s; }
+    .b3  { animation-delay: 0.5s; }
+    .b4  { animation-delay: 0.1s; }
+    .b5  { animation-delay: 0.7s; }
+    .b6  { animation-delay: 0.3s; }
+    .b7  { animation-delay: 0.9s; }
+    .b8  { animation-delay: 0.4s; }
+    .b9  { animation-delay: 0.6s; }
+    .b10 { animation-delay: 0.15s; }
+    .b11 { animation-delay: 0.8s; }
+    .b12 { animation-delay: 0.35s; }
+    .b13 { animation-delay: 0.65s; }
+    .b14 { animation-delay: 0.25s; }
+    .b15 { animation-delay: 0.55s; }
+    .b16 { animation-delay: 0.85s; }
+    .b17 { animation-delay: 0.45s; }
+    .b18 { animation-delay: 0.1s; }
+    .b19 { animation-delay: 0.75s; }
+    .b20 { animation-delay: 0.3s; }
+  </style>
+
+  <!-- Ambient Light Orbs behind glass -->
+  <circle cx="200" cy="110" r="90" fill="#FF5D00" opacity="0.2" filter="blur(25px)"/>
+  <circle cx="650" cy="110" r="90" fill="#FFA726" opacity="0.18" filter="blur(25px)"/>
+
+  <!-- Main Glass Container -->
+  <g transform="translate(20, 15)" filter="url(#act-shadow)">
+    <rect width="810" height="180" rx="18" fill="url(#act-glass-fill)"/>
+    <rect width="810" height="180" rx="18" stroke="url(#act-glass-stroke)" stroke-width="1.3"/>
+
+    <!-- Header Row -->
+    <g transform="translate(28, 30)">
+      <circle cx="5" cy="5" r="4.5" fill="#00E676" class="pulse-dot"/>
+      <text x="18" y="9" class="act-title">ACTIVITY FREQUENCY &amp; CONTRIBUTION PULSE</text>
+      <text x="750" y="9" class="act-sub" text-anchor="end">LIVE TELEMETRY</text>
+    </g>
+
+    <!-- Grid Lines (Subtle Glass Ruler) -->
+    <g opacity="0.1" stroke="#FFA726" stroke-dasharray="3 3">
+      <line x1="28" y1="75" x2="780" y2="75"/>
+      <line x1="28" y1="115" x2="780" y2="115"/>
+      <line x1="28" y1="155" x2="780" y2="155"/>
+    </g>
+
+    <!-- Animated Frequency Bars (Left side) -->
+    <g transform="translate(30, 0)">
+      <!-- 20 Bars -->
+      <g transform="translate(0, 155)"><rect class="bar b1" x="0" y="-45" width="8" height="45" rx="4" fill="url(#bar-gradient)"/></g>
+      <g transform="translate(16, 155)"><rect class="bar b2" x="0" y="-65" width="8" height="65" rx="4" fill="url(#bar-gradient)"/></g>
+      <g transform="translate(32, 155)"><rect class="bar b3" x="0" y="-35" width="8" height="35" rx="4" fill="url(#bar-gradient)"/></g>
+      <g transform="translate(48, 155)"><rect class="bar b4" x="0" y="-80" width="8" height="80" rx="4" fill="url(#bar-gradient)"/></g>
+      <g transform="translate(64, 155)"><rect class="bar b5" x="0" y="-55" width="8" height="55" rx="4" fill="url(#bar-gradient)"/></g>
+      <g transform="translate(80, 155)"><rect class="bar b6" x="0" y="-70" width="8" height="70" rx="4" fill="url(#bar-gradient)"/></g>
+      <g transform="translate(96, 155)"><rect class="bar b7" x="0" y="-90" width="8" height="90" rx="4" fill="url(#bar-gradient)"/></g>
+      <g transform="translate(112, 155)"><rect class="bar b8" x="0" y="-40" width="8" height="40" rx="4" fill="url(#bar-gradient)"/></g>
+      <g transform="translate(128, 155)"><rect class="bar b9" x="0" y="-75" width="8" height="75" rx="4" fill="url(#bar-gradient)"/></g>
+      <g transform="translate(144, 155)"><rect class="bar b10" x="0" y="-60" width="8" height="60" rx="4" fill="url(#bar-gradient)"/></g>
+      <g transform="translate(160, 155)"><rect class="bar b11" x="0" y="-85" width="8" height="85" rx="4" fill="url(#bar-gradient)"/></g>
+      <g transform="translate(176, 155)"><rect class="bar b12" x="0" y="-50" width="8" height="50" rx="4" fill="url(#bar-gradient)"/></g>
+      <g transform="translate(192, 155)"><rect class="bar b13" x="0" y="-68" width="8" height="68" rx="4" fill="url(#bar-gradient)"/></g>
+      <g transform="translate(208, 155)"><rect class="bar b14" x="0" y="-95" width="8" height="95" rx="4" fill="url(#bar-gradient)"/></g>
+      <g transform="translate(224, 155)"><rect class="bar b15" x="0" y="-42" width="8" height="42" rx="4" fill="url(#bar-gradient)"/></g>
+      <g transform="translate(240, 155)"><rect class="bar b16" x="0" y="-78" width="8" height="78" rx="4" fill="url(#bar-gradient)"/></g>
+      <g transform="translate(256, 155)"><rect class="bar b17" x="0" y="-88" width="8" height="88" rx="4" fill="url(#bar-gradient)"/></g>
+      <g transform="translate(272, 155)"><rect class="bar b18" x="0" y="-62" width="8" height="62" rx="4" fill="url(#bar-gradient)"/></g>
+      <g transform="translate(288, 155)"><rect class="bar b19" x="0" y="-72" width="8" height="72" rx="4" fill="url(#bar-gradient)"/></g>
+      <g transform="translate(304, 155)"><rect class="bar b20" x="0" y="-52" width="8" height="52" rx="4" fill="url(#bar-gradient)"/></g>
+    </g>
+
+    <!-- Glowing Dynamic Wave Line overlay -->
+    <path class="wave-line" d="M 30 115 Q 110 60, 190 100 T 350 90 T 510 120 T 670 70 T 780 100" fill="none" stroke="url(#wave-grad)" stroke-width="2.5" filter="url(#wave-glow)"/>
+
+    <!-- Right Side: Key Highlight Cards -->
+    <g transform="translate(480, 58)">
+      <!-- Mini Glass Stat 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="135" height="95" rx="14" fill="#FFFFFF" fill-opacity="0.04" stroke="url(#act-glass-stroke)" stroke-width="1"/>
+        <text x="16" y="32" class="metric-num">282+</text>
+        <text x="16" y="52" class="metric-lbl">TOTAL COMMITS</text>
+        <text x="16" y="75" font-family="'Consolas', monospace" font-size="10.5" fill="#FF8A00">▲ ACTIVE</text>
+      </g>
+      <!-- Mini Glass Stat 2 -->
+      <g transform="translate(150, 0)">
+        <rect width="135" height="95" rx="14" fill="#FFFFFF" fill-opacity="0.04" stroke="url(#act-glass-stroke)" stroke-width="1"/>
+        <text x="16" y="32" class="metric-num">100%</text>
+        <text x="16" y="52" class="metric-lbl">CONSISTENCY</text>
+        <text x="16" y="75" font-family="'Consolas', monospace" font-size="10.5" fill="#FFA726">★ YEAR 2026</text>
+      </g>
+    </g>
+  </g>
+</svg>

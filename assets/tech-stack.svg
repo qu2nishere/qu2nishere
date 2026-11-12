@@ -1,0 +1,151 @@
+<svg width="850" height="145" viewBox="0 0 850 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Card Glass Fills -->
+    <linearGradient id="tech-glass-fill" x1="0" y1="0" x2="190" y2="55" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.09"/>
+      <stop offset="35%" stop-color="#FF7A00" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#120804" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <!-- Glass Border with Refraction -->
+    <linearGradient id="tech-glass-border" x1="0" y1="0" x2="190" y2="55" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFA845" stop-opacity="0.8"/>
+      <stop offset="30%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#FF6A00" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#FF5722" stop-opacity="0.45"/>
+    </linearGradient>
+
+    <filter id="chip-shadow" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.5"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#FF6A00" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <style>
+    .tech-name { font-family: 'Segoe UI', -apple-system, sans-serif; font-weight: 700; font-size: 13px; fill: #FFFFFF; }
+    .tech-desc { font-family: 'Segoe UI', -apple-system, sans-serif; font-weight: 400; font-size: 10px; fill: #B8A699; }
+
+    @keyframes chipFloat1 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
+    }
+    @keyframes chipFloat2 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+    }
+
+    .row-1 { animation: chipFloat1 5s ease-in-out infinite; }
+    .row-2 { animation: chipFloat2 6s ease-in-out infinite 0.5s; }
+  </style>
+
+  <!-- Row 1: Core Languages & UI (y = 10) -->
+  <g class="row-1">
+    <!-- 1. TypeScript -->
+    <g transform="translate(25, 10)" filter="url(#chip-shadow)">
+      <rect width="188" height="54" rx="14" fill="url(#tech-glass-fill)"/>
+      <rect width="188" height="54" rx="14" stroke="url(#tech-glass-border)" stroke-width="1.2"/>
+      <!-- Icon TS -->
+      <rect x="14" y="13" width="28" height="28" rx="6" fill="#3178C6"/>
+      <text x="21" y="32" font-family="'Segoe UI', sans-serif" font-weight="800" font-size="13" fill="#FFFFFF">TS</text>
+      <!-- Label -->
+      <text x="50" y="28" class="tech-name">TypeScript</text>
+      <text x="50" y="42" class="tech-desc">Primary Language</text>
+    </g>
+
+    <!-- 2. React -->
+    <g transform="translate(225, 10)" filter="url(#chip-shadow)">
+      <rect width="188" height="54" rx="14" fill="url(#tech-glass-fill)"/>
+      <rect width="188" height="54" rx="14" stroke="url(#tech-glass-border)" stroke-width="1.2"/>
+      <!-- Icon React -->
+      <rect x="14" y="13" width="28" height="28" rx="6" fill="#20232A"/>
+      <circle cx="28" cy="27" r="4" fill="#61DAFB"/>
+      <ellipse cx="28" cy="27" rx="10" ry="4" fill="none" stroke="#61DAFB" stroke-width="1.2" transform="rotate(30 28 27)"/>
+      <ellipse cx="28" cy="27" rx="10" ry="4" fill="none" stroke="#61DAFB" stroke-width="1.2" transform="rotate(-30 28 27)"/>
+      <!-- Label -->
+      <text x="50" y="28" class="tech-name">React</text>
+      <text x="50" y="42" class="tech-desc">Interactive Frontend</text>
+    </g>
+
+    <!-- 3. Next.js -->
+    <g transform="translate(425, 10)" filter="url(#chip-shadow)">
+      <rect width="188" height="54" rx="14" fill="url(#tech-glass-fill)"/>
+      <rect width="188" height="54" rx="14" stroke="url(#tech-glass-border)" stroke-width="1.2"/>
+      <!-- Icon Next.js -->
+      <rect x="14" y="13" width="28" height="28" rx="6" fill="#000000"/>
+      <circle cx="28" cy="27" r="10" fill="none" stroke="#FFFFFF" stroke-width="1.2"/>
+      <text x="24" y="31" font-family="'Segoe UI', sans-serif" font-weight="900" font-size="11" fill="#FFFFFF">N</text>
+      <!-- Label -->
+      <text x="50" y="28" class="tech-name">Next.js</text>
+      <text x="50" y="42" class="tech-desc">Full-Stack Framework</text>
+    </g>
+
+    <!-- 4. Tailwind CSS -->
+    <g transform="translate(625, 10)" filter="url(#chip-shadow)">
+      <rect width="188" height="54" rx="14" fill="url(#tech-glass-fill)"/>
+      <rect width="188" height="54" rx="14" stroke="url(#tech-glass-border)" stroke-width="1.2"/>
+      <!-- Icon Tailwind -->
+      <rect x="14" y="13" width="28" height="28" rx="6" fill="#0F172A"/>
+      <circle cx="28" cy="27" r="7" fill="#38BDF8" opacity="0.8"/>
+      <!-- Label -->
+      <text x="50" y="28" class="tech-name">Tailwind CSS</text>
+      <text x="50" y="42" class="tech-desc">Modern Styling &amp; UI</text>
+    </g>
+  </g>
+
+  <!-- Row 2: Backend, Scripting & DevOps (y = 75) -->
+  <g class="row-2">
+    <!-- 5. Node.js -->
+    <g transform="translate(25, 75)" filter="url(#chip-shadow)">
+      <rect width="188" height="54" rx="14" fill="url(#tech-glass-fill)"/>
+      <rect width="188" height="54" rx="14" stroke="url(#tech-glass-border)" stroke-width="1.2"/>
+      <!-- Icon Node.js -->
+      <rect x="14" y="13" width="28" height="28" rx="6" fill="#1C2E1F"/>
+      <polygon points="28,18 36,23 36,31 28,36 20,31 20,23" fill="#5FA04E"/>
+      <!-- Label -->
+      <text x="50" y="28" class="tech-name">Node.js</text>
+      <text x="50" y="42" class="tech-desc">Runtime Engine</text>
+    </g>
+
+    <!-- 6. Python -->
+    <g transform="translate(225, 75)" filter="url(#chip-shadow)">
+      <rect width="188" height="54" rx="14" fill="url(#tech-glass-fill)"/>
+      <rect width="188" height="54" rx="14" stroke="url(#tech-glass-border)" stroke-width="1.2"/>
+      <!-- Icon Python -->
+      <rect x="14" y="13" width="28" height="28" rx="6" fill="#1E2A38"/>
+      <circle cx="25" cy="24" r="3" fill="#3776AB"/>
+      <circle cx="31" cy="30" r="3" fill="#FFD43B"/>
+      <!-- Label -->
+      <text x="50" y="28" class="tech-name">Python</text>
+      <text x="50" y="42" class="tech-desc">Scripting &amp; Logic</text>
+    </g>
+
+    <!-- 7. Docker -->
+    <g transform="translate(425, 75)" filter="url(#chip-shadow)">
+      <rect width="188" height="54" rx="14" fill="url(#tech-glass-fill)"/>
+      <rect width="188" height="54" rx="14" stroke="url(#tech-glass-border)" stroke-width="1.2"/>
+      <!-- Icon Docker -->
+      <rect x="14" y="13" width="28" height="28" rx="6" fill="#162E44"/>
+      <rect x="22" y="24" width="4" height="4" fill="#2496ED"/>
+      <rect x="27" y="24" width="4" height="4" fill="#2496ED"/>
+      <rect x="32" y="24" width="4" height="4" fill="#2496ED"/>
+      <rect x="27" y="19" width="4" height="4" fill="#2496ED"/>
+      <!-- Label -->
+      <text x="50" y="28" class="tech-name">Docker</text>
+      <text x="50" y="42" class="tech-desc">Containers &amp; Cloud</text>
+    </g>
+
+    <!-- 8. Git -->
+    <g transform="translate(625, 75)" filter="url(#chip-shadow)">
+      <rect width="188" height="54" rx="14" fill="url(#tech-glass-fill)"/>
+      <rect width="188" height="54" rx="14" stroke="url(#tech-glass-border)" stroke-width="1.2"/>
+      <!-- Icon Git -->
+      <rect x="14" y="13" width="28" height="28" rx="6" fill="#3D1D16"/>
+      <circle cx="24" cy="27" r="3" fill="#F05032"/>
+      <circle cx="32" cy="22" r="3" fill="#F05032"/>
+      <circle cx="32" cy="32" r="3" fill="#F05032"/>
+      <!-- Label -->
+      <text x="50" y="28" class="tech-name">Git &amp; GitHub</text>
+      <text x="50" y="42" class="tech-desc">Version Control</text>
+    </g>
+  </g>
+</svg>
