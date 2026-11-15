@@ -31,6 +31,18 @@
       <rect width="24" height="12" fill="#353646"/>
       <path d="M0 0.5H24M0 6.5H24M0.5 0V6M12.5 6V12" stroke="#23242f" stroke-width="1"/>
     </pattern>
+    <linearGradient id="aurora1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5dffb0" stop-opacity="0"/><stop offset="40%" stop-color="#5dffb0"/><stop offset="75%" stop-color="#4fd2ff"/><stop offset="100%" stop-color="#4fd2ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="aurora2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b47aff" stop-opacity="0"/><stop offset="50%" stop-color="#b47aff"/><stop offset="100%" stop-color="#5dffb0" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="orb-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c08cff" stop-opacity="0.9"/><stop offset="100%" stop-color="#7a3cff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="magic-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
     <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
@@ -78,12 +90,15 @@
 
     <!-- waving flag (origin top of pole) -->
     <g id="flag">
-      <line x1="0" y1="0" x2="0" y2="28" stroke="#6b5232" stroke-width="2"/>
-      <path fill="#a51c1c">
+      <line x1="0" y1="-2" x2="0" y2="34" stroke="#6b5232" stroke-width="2.2"/>
+      <circle cx="0" cy="-2.5" r="2" fill="#e6b84a"/>
+      <path fill="#da251d">
         <animate attributeName="d" dur="1.4s" repeatCount="indefinite"
-          values="M1 1Q10 -3 19 1T37 1V17Q28 13 19 17T1 17Z;M1 1Q10 5 19 1T37 1V17Q28 21 19 17T1 17Z;M1 1Q10 -3 19 1T37 1V17Q28 13 19 17T1 17Z"/>
+          values="M1 1Q8.5 -2.5 16 1T31 1V21Q23.5 17.5 16 21T1 21Z;M1 1Q8.5 4.5 16 1T31 1V21Q23.5 24.5 16 21T1 21Z;M1 1Q8.5 -2.5 16 1T31 1V21Q23.5 17.5 16 21T1 21Z"/>
       </path>
-      <circle cx="12" cy="9" r="3.2" fill="#e6b84a"/>
+      <polygon points="16.00,4.40 17.53,8.90 22.28,8.96 18.47,11.80 19.88,16.34 16.00,13.60 12.12,16.34 13.53,11.80 9.72,8.96 14.47,8.90" fill="#ffde00">
+        <animateTransform attributeName="transform" type="translate" values="0 -0.8;0 0.8;0 -0.8" dur="1.4s" repeatCount="indefinite"/>
+      </polygon>
     </g>
   </defs>
 
@@ -101,6 +116,10 @@
     @keyframes flame { from { transform: scale(1,1); } to { transform: scale(0.82,1.22); } }
     .smoke { transform-box: fill-box; transform-origin: center; animation: smoke 4s ease-out infinite; opacity: 0; }
     @keyframes smoke { 0% { transform: translate(0,0) scale(0.6); opacity: 0.55; } 100% { transform: translate(6px,-22px) scale(2.2); opacity: 0; } }
+    .mote { transform-box: fill-box; animation-name: mote; animation-timing-function: ease-in-out; animation-iteration-count: infinite; }
+    @keyframes mote { 0% { transform: translate(0,0); opacity: 0; } 20% { opacity: 1; } 50% { transform: translate(8px,-18px); } 80% { opacity: 0.9; } 100% { transform: translate(-4px,-36px); opacity: 0; } }
+    .orb { animation: orb 2.4s ease-in-out infinite; }
+    @keyframes orb { 0%,100% { opacity: 0.55; } 50% { opacity: 1; } }
     .fall1 { animation-name: fall1; animation-timing-function: linear; animation-iteration-count: infinite; }
     .fall2 { animation-name: fall2; animation-timing-function: linear; animation-iteration-count: infinite; }
     .fall3 { animation-name: fall3; animation-timing-function: linear; animation-iteration-count: infinite; }
@@ -112,6 +131,13 @@
   <!-- sky -->
   <rect width="850" height="360" fill="url(#sky)"/>
   <g fill="#f2f5ff"><circle class="tw2" cx="806" cy="62" r="0.5"/><circle class="tw3" cx="80" cy="90" r="1.3"/><circle class="tw1" cx="32" cy="68" r="0.6"/><circle class="tw1" cx="468" cy="14" r="1.0"/><circle class="tw1" cx="536" cy="90" r="0.6"/><circle class="tw3" cx="337" cy="147" r="0.5"/><circle class="tw1" cx="246" cy="26" r="0.6"/><circle class="tw2" cx="476" cy="104" r="0.6"/><circle class="tw3" cx="543" cy="59" r="1.0"/><circle class="tw1" cx="480" cy="95" r="0.9"/><circle class="tw3" cx="363" cy="51" r="1.0"/><circle class="tw2" cx="307" cy="41" r="0.7"/><circle class="tw1" cx="70" cy="49" r="0.9"/><circle class="tw2" cx="620" cy="47" r="1.4"/><circle class="tw1" cx="435" cy="29" r="0.8"/><circle class="tw2" cx="358" cy="144" r="0.6"/><circle class="tw3" cx="487" cy="132" r="0.8"/><circle class="tw3" cx="298" cy="77" r="1.2"/><circle class="tw1" cx="714" cy="142" r="0.9"/><circle class="tw3" cx="55" cy="111" r="0.8"/><circle class="tw3" cx="844" cy="124" r="0.8"/><circle class="tw2" cx="754" cy="55" r="1.3"/><circle class="tw2" cx="143" cy="22" r="0.6"/><circle class="tw2" cx="110" cy="41" r="0.9"/><circle class="tw2" cx="68" cy="70" r="1.0"/><circle class="tw1" cx="696" cy="130" r="0.8"/><circle class="tw2" cx="838" cy="104" r="0.8"/><circle class="tw1" cx="128" cy="31" r="0.7"/><circle class="tw1" cx="10" cy="126" r="0.7"/><circle class="tw2" cx="3" cy="66" r="0.8"/><circle class="tw3" cx="271" cy="23" r="1.3"/><circle class="tw3" cx="557" cy="112" r="0.9"/><circle class="tw3" cx="678" cy="62" r="0.9"/><circle class="tw1" cx="409" cy="63" r="0.7"/><circle class="tw1" cx="375" cy="21" r="1.0"/><circle class="tw1" cx="0" cy="27" r="0.6"/><circle class="tw2" cx="522" cy="15" r="0.7"/><circle class="tw2" cx="126" cy="42" r="0.8"/><circle class="tw2" cx="403" cy="22" r="0.9"/><circle class="tw2" cx="408" cy="50" r="0.6"/><circle class="tw3" cx="291" cy="43" r="1.2"/><circle class="tw1" cx="439" cy="35" r="1.4"/><circle class="tw2" cx="125" cy="84" r="0.5"/><circle class="tw3" cx="253" cy="98" r="0.6"/><circle class="tw2" cx="441" cy="137" r="0.8"/></g>
+
+  <!-- aurora -->
+  <path fill="url(#aurora1)" opacity="0.32">
+      <animate attributeName="d" dur="11s" repeatCount="indefinite" values="M380 70Q480 30 580 62T780 40T870 58V96Q770 78 680 100T480 92T380 108Z;M380 60Q480 46 580 48T780 58T870 40V82Q770 96 680 84T480 104T380 96Z;M380 70Q480 30 580 62T780 40T870 58V96Q770 78 680 100T480 92T380 108Z"/>
+    </path><path fill="url(#aurora2)" opacity="0.22">
+      <animate attributeName="d" dur="14s" repeatCount="indefinite" values="M430 104Q540 70 640 96T850 82V118Q740 112 640 128T430 132Z;M430 96Q540 92 640 80T850 98V128Q740 122 640 116T430 126Z;M430 104Q540 70 640 96T850 82V118Q740 112 640 128T430 132Z"/>
+    </path>
 
   <!-- moon -->
   <circle cx="770" cy="62" r="78" fill="url(#moon-glow)"/>
@@ -246,6 +272,14 @@
       <path class="flame" d="M0 -17Q-4.5 -22 0 -30Q4.5 -22 0 -17Z" fill="#ffcf5a"/>
       <path class="flame" d="M0 -18Q-2 -21 0 -25Q2 -21 0 -18Z" fill="#fff3c4"/>
     </g>
+  <g>
+      <rect x="516" y="212" width="14" height="38" fill="#4a4a5e"/>
+      <path d="M512 213L523 186L534 213Z" fill="#4b2a7a"/>
+      <path d="M512 213L523 186L534 213L531 213L523 193L515 213Z" fill="#e8eefc"/>
+      <path class="win" d="M520 232V226A3 3 0 0 1 526 226V232Z" fill="#c08cff"/>
+      <circle cx="523" cy="182" r="9" fill="url(#orb-glow)" class="orb"/>
+      <circle cx="523" cy="182" r="3" fill="#e2c6ff"/>
+    </g>
 
   <!-- near snow field, road & torches -->
   <path d="M110 300Q300 270 520 284T850 278V330H110Z" fill="url(#snow-near)"/>
@@ -322,6 +356,58 @@
       <animateTransform attributeName="transform" type="scale" values="0.62;0.3" dur="38s" begin="-4.4s" repeatCount="indefinite" additive="sum"/>
       <use href="#walker"/>
     </g>
+  <g transform="translate(262 284) scale(1.25 1.25)"><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0;0 0" keyTimes="0;0.03;0.06;1" dur="12s" begin="1.0s" repeatCount="indefinite"/><path d="M-6 -16L6 -16L8.5 0H-8.5Z" fill="#1f3a8a"/>
+      <path d="M-8.5 0H8.5L8 -2H-8Z" fill="#e6b84a"/>
+      <rect x="-5" y="-17" width="10" height="3" rx="1.5" fill="#e6b84a"/>
+      <circle cy="-21" r="4.6" fill="#f1c9a5"/>
+      <circle cx="2" cy="-21.5" r="0.8" fill="#2a1d14"/>
+      <ellipse cy="-24" rx="8" ry="1.8" fill="#2b4fb8"/>
+      <path d="M-5.5 -24L5.5 -24L-1 -40Z" fill="#2b4fb8"/>
+      <circle cx="-1" cy="-40" r="1.4" fill="#e6b84a"/>
+      <path d="M0.5 -31L1.3 -29.4L3 -29.2L1.7 -28L2 -26.3L0.5 -27.1L-1 -26.3L-0.7 -28L-2 -29.2L-0.3 -29.4Z" fill="#ffe27a"/>
+      <line x1="4" y1="-12" x2="13" y2="-20" stroke="#6b4a24" stroke-width="1.6" stroke-linecap="round"/><circle cx="13" cy="-20" r="1.8" fill="#6ff3ff" filter="url(#magic-glow)"><animate attributeName="r" values="1.8;5;1.8;1.8" keyTimes="0;0.02;0.08;1" dur="12s" begin="1.0s" repeatCount="indefinite"/></circle></g></g><g transform="translate(404 268) scale(-1.25 1.25)"><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0;0 0" keyTimes="0;0.03;0.06;1" dur="12s" begin="7.0s" repeatCount="indefinite"/><path d="M-6 -16L6 -16L8.5 0H-8.5Z" fill="#5b2a86"/>
+      <path d="M-8.5 0H8.5L8 -2H-8Z" fill="#f1c75b"/>
+      <rect x="-5" y="-17" width="10" height="3" rx="1.5" fill="#f1c75b"/>
+      <circle cy="-21" r="4.6" fill="#f1c9a5"/>
+      <circle cx="2" cy="-21.5" r="0.8" fill="#2a1d14"/>
+      <ellipse cy="-24" rx="8" ry="1.8" fill="#8b1a1a"/>
+      <path d="M-5.5 -24L5.5 -24L-1 -40Z" fill="#8b1a1a"/>
+      <circle cx="-1" cy="-40" r="1.4" fill="#f1c75b"/>
+      <path d="M0.5 -31L1.3 -29.4L3 -29.2L1.7 -28L2 -26.3L0.5 -27.1L-1 -26.3L-0.7 -28L-2 -29.2L-0.3 -29.4Z" fill="#ffe27a"/>
+      <line x1="4" y1="-12" x2="13" y2="-20" stroke="#6b4a24" stroke-width="1.6" stroke-linecap="round"/><circle cx="13" cy="-20" r="1.8" fill="#ff7ae0" filter="url(#magic-glow)"><animate attributeName="r" values="1.8;5;1.8;1.8" keyTimes="0;0.02;0.08;1" dur="12s" begin="7.0s" repeatCount="indefinite"/></circle></g></g><g opacity="0">
+        <animateMotion path="M278 259Q336 200 396 250" keyPoints="0;1;1" keyTimes="0;0.1;1" calcMode="linear" dur="12s" begin="1.00s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" keyTimes="0;0.1" calcMode="discrete" dur="12s" begin="1.00s" repeatCount="indefinite"/>
+        <circle r="9.2" fill="#6ff3ff" opacity="0.3"/><circle r="4.2" fill="#ffffff"/></g><g opacity="0">
+        <animateMotion path="M278 259Q336 200 396 250" keyPoints="0;1;1" keyTimes="0;0.1;1" calcMode="linear" dur="12s" begin="1.06s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" keyTimes="0;0.1" calcMode="discrete" dur="12s" begin="1.06s" repeatCount="indefinite"/>
+        <circle r="3.1" fill="#6ff3ff" opacity="0.7"/></g><g opacity="0">
+        <animateMotion path="M278 259Q336 200 396 250" keyPoints="0;1;1" keyTimes="0;0.1;1" calcMode="linear" dur="12s" begin="1.12s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" keyTimes="0;0.1" calcMode="discrete" dur="12s" begin="1.12s" repeatCount="indefinite"/>
+        <circle r="2.3" fill="#6ff3ff" opacity="0.5"/></g><g opacity="0">
+        <animateMotion path="M278 259Q336 200 396 250" keyPoints="0;1;1" keyTimes="0;0.1;1" calcMode="linear" dur="12s" begin="1.18s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" keyTimes="0;0.1" calcMode="discrete" dur="12s" begin="1.18s" repeatCount="indefinite"/>
+        <circle r="1.6" fill="#6ff3ff" opacity="0.35"/></g><g transform="translate(400 250)"><g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.099;0.1;0.17;1" dur="12s" begin="1.0s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="0.2;0.2;1.6;1.6" keyTimes="0;0.1;0.17;1" dur="12s" begin="1.0s" repeatCount="indefinite"/>
+        <circle r="7" stroke="#6ff3ff" stroke-width="1.5" fill="#6ff3ff" fill-opacity="0.25"/><line x1="0" y1="-5" x2="0" y2="-11" transform="rotate(0)" stroke="#6ff3ff" stroke-width="1.4" stroke-linecap="round"/><line x1="0" y1="-5" x2="0" y2="-11" transform="rotate(45)" stroke="#6ff3ff" stroke-width="1.4" stroke-linecap="round"/><line x1="0" y1="-5" x2="0" y2="-11" transform="rotate(90)" stroke="#6ff3ff" stroke-width="1.4" stroke-linecap="round"/><line x1="0" y1="-5" x2="0" y2="-11" transform="rotate(135)" stroke="#6ff3ff" stroke-width="1.4" stroke-linecap="round"/><line x1="0" y1="-5" x2="0" y2="-11" transform="rotate(180)" stroke="#6ff3ff" stroke-width="1.4" stroke-linecap="round"/><line x1="0" y1="-5" x2="0" y2="-11" transform="rotate(225)" stroke="#6ff3ff" stroke-width="1.4" stroke-linecap="round"/><line x1="0" y1="-5" x2="0" y2="-11" transform="rotate(270)" stroke="#6ff3ff" stroke-width="1.4" stroke-linecap="round"/><line x1="0" y1="-5" x2="0" y2="-11" transform="rotate(315)" stroke="#6ff3ff" stroke-width="1.4" stroke-linecap="round"/>
+      </g></g><g opacity="0">
+        <animateMotion path="M388 243Q328 192 266 264" keyPoints="0;1;1" keyTimes="0;0.1;1" calcMode="linear" dur="12s" begin="7.00s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" keyTimes="0;0.1" calcMode="discrete" dur="12s" begin="7.00s" repeatCount="indefinite"/>
+        <circle r="9.2" fill="#ff7ae0" opacity="0.3"/><circle r="4.2" fill="#ffffff"/></g><g opacity="0">
+        <animateMotion path="M388 243Q328 192 266 264" keyPoints="0;1;1" keyTimes="0;0.1;1" calcMode="linear" dur="12s" begin="7.06s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" keyTimes="0;0.1" calcMode="discrete" dur="12s" begin="7.06s" repeatCount="indefinite"/>
+        <circle r="3.1" fill="#ff7ae0" opacity="0.7"/></g><g opacity="0">
+        <animateMotion path="M388 243Q328 192 266 264" keyPoints="0;1;1" keyTimes="0;0.1;1" calcMode="linear" dur="12s" begin="7.12s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" keyTimes="0;0.1" calcMode="discrete" dur="12s" begin="7.12s" repeatCount="indefinite"/>
+        <circle r="2.3" fill="#ff7ae0" opacity="0.5"/></g><g opacity="0">
+        <animateMotion path="M388 243Q328 192 266 264" keyPoints="0;1;1" keyTimes="0;0.1;1" calcMode="linear" dur="12s" begin="7.18s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" keyTimes="0;0.1" calcMode="discrete" dur="12s" begin="7.18s" repeatCount="indefinite"/>
+        <circle r="1.6" fill="#ff7ae0" opacity="0.35"/></g><g transform="translate(264 266)"><g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.099;0.1;0.17;1" dur="12s" begin="7.0s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="0.2;0.2;1.6;1.6" keyTimes="0;0.1;0.17;1" dur="12s" begin="7.0s" repeatCount="indefinite"/>
+        <circle r="7" stroke="#ff7ae0" stroke-width="1.5" fill="#ff7ae0" fill-opacity="0.25"/><line x1="0" y1="-5" x2="0" y2="-11" transform="rotate(0)" stroke="#ff7ae0" stroke-width="1.4" stroke-linecap="round"/><line x1="0" y1="-5" x2="0" y2="-11" transform="rotate(45)" stroke="#ff7ae0" stroke-width="1.4" stroke-linecap="round"/><line x1="0" y1="-5" x2="0" y2="-11" transform="rotate(90)" stroke="#ff7ae0" stroke-width="1.4" stroke-linecap="round"/><line x1="0" y1="-5" x2="0" y2="-11" transform="rotate(135)" stroke="#ff7ae0" stroke-width="1.4" stroke-linecap="round"/><line x1="0" y1="-5" x2="0" y2="-11" transform="rotate(180)" stroke="#ff7ae0" stroke-width="1.4" stroke-linecap="round"/><line x1="0" y1="-5" x2="0" y2="-11" transform="rotate(225)" stroke="#ff7ae0" stroke-width="1.4" stroke-linecap="round"/><line x1="0" y1="-5" x2="0" y2="-11" transform="rotate(270)" stroke="#ff7ae0" stroke-width="1.4" stroke-linecap="round"/><line x1="0" y1="-5" x2="0" y2="-11" transform="rotate(315)" stroke="#ff7ae0" stroke-width="1.4" stroke-linecap="round"/>
+      </g></g>
+  <g filter="url(#magic-glow)"><circle class="mote" style="animation-duration:8.9s;animation-delay:-3.6s" cx="618" cy="260" r="1.6" fill="#ffe27a"/><circle class="mote" style="animation-duration:6.5s;animation-delay:-9.0s" cx="403" cy="270" r="1.3" fill="#ff9ae8"/><circle class="mote" style="animation-duration:10.2s;animation-delay:-8.7s" cx="145" cy="218" r="1.5" fill="#a8ffcb"/><circle class="mote" style="animation-duration:10.8s;animation-delay:-4.9s" cx="182" cy="294" r="1.7" fill="#a8ffcb"/><circle class="mote" style="animation-duration:10.9s;animation-delay:-2.5s" cx="207" cy="228" r="1.4" fill="#8ff7ff"/><circle class="mote" style="animation-duration:10.7s;animation-delay:-7.2s" cx="590" cy="280" r="1.3" fill="#8ff7ff"/><circle class="mote" style="animation-duration:6.0s;animation-delay:-1.3s" cx="534" cy="218" r="1.5" fill="#ffe27a"/><circle class="mote" style="animation-duration:9.1s;animation-delay:-5.3s" cx="441" cy="280" r="1.0" fill="#ff9ae8"/><circle class="mote" style="animation-duration:8.6s;animation-delay:-5.8s" cx="406" cy="234" r="1.4" fill="#8ff7ff"/><circle class="mote" style="animation-duration:8.7s;animation-delay:-10.0s" cx="328" cy="242" r="1.7" fill="#ffe27a"/><circle class="mote" style="animation-duration:8.4s;animation-delay:-2.3s" cx="305" cy="297" r="1.5" fill="#ff9ae8"/><circle class="mote" style="animation-duration:6.3s;animation-delay:-1.9s" cx="758" cy="270" r="1.0" fill="#ffe27a"/><circle class="mote" style="animation-duration:9.3s;animation-delay:-9.3s" cx="291" cy="218" r="1.2" fill="#a8ffcb"/><circle class="mote" style="animation-duration:7.8s;animation-delay:-4.0s" cx="135" cy="240" r="1.7" fill="#8ff7ff"/><circle class="mote" style="animation-duration:7.0s;animation-delay:-9.7s" cx="351" cy="285" r="1.1" fill="#ffe27a"/><circle class="mote" style="animation-duration:7.3s;animation-delay:-8.9s" cx="207" cy="268" r="1.4" fill="#ffe27a"/><circle class="mote" style="animation-duration:8.4s;animation-delay:-9.1s" cx="170" cy="266" r="1.7" fill="#8ff7ff"/><circle class="mote" style="animation-duration:7.1s;animation-delay:-9.7s" cx="231" cy="219" r="1.0" fill="#a8ffcb"/><circle class="mote" style="animation-duration:8.2s;animation-delay:-7.1s" cx="353" cy="225" r="1.0" fill="#ffe27a"/><circle class="mote" style="animation-duration:7.6s;animation-delay:-1.9s" cx="794" cy="278" r="0.9" fill="#a8ffcb"/><circle class="mote" style="animation-duration:10.2s;animation-delay:-9.8s" cx="444" cy="224" r="1.0" fill="#8ff7ff"/><circle class="mote" style="animation-duration:7.8s;animation-delay:-9.6s" cx="218" cy="297" r="1.1" fill="#ff9ae8"/></g>
 
   <!-- ==================== CASTLE (foreground, left) ==================== -->
   <rect x="0" y="118" width="112" height="242" fill="url(#bricks)"/>
