@@ -1,0 +1,111 @@
+<svg width="850" height="300" viewBox="0 0 850 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff1b8"/><stop offset="45%" stop-color="#e6b84a"/><stop offset="100%" stop-color="#9c6b1c"/>
+    </linearGradient>
+    <linearGradient id="parch" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4e6c2"/><stop offset="60%" stop-color="#e6d09c"/><stop offset="100%" stop-color="#cfb47a"/>
+    </linearGradient>
+    <pattern id="bricks" width="24" height="12" patternUnits="userSpaceOnUse">
+      <rect width="24" height="12" fill="#25242c"/>
+      <path d="M0 0.5H24M0 6.5H24M0.5 0V6M12.5 6V12" stroke="#1a1a20" stroke-width="1"/>
+    </pattern>
+    <pattern id="bricks-lit" width="24" height="12" patternUnits="userSpaceOnUse">
+      <rect width="24" height="12" fill="#3a3a46"/>
+      <path d="M0 0.5H24M0 6.5H24M0.5 0V6M12.5 6V12" stroke="#262631" stroke-width="1"/>
+    </pattern>
+    <filter id="drop" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1022"/><stop offset="70%" stop-color="#2a2340"/><stop offset="100%" stop-color="#5a3528"/>
+    </linearGradient>
+    <clipPath id="scene"><rect x="18" y="12" width="814" height="232" rx="6"/></clipPath>
+    
+    <g id="soldier"><g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -1.6;0 0" dur="0.45s" repeatCount="indefinite"/>
+      <rect x="-3" y="-18" width="6" height="18" rx="1.5" fill="#24242c"><animateTransform attributeName="transform" type="rotate" values="-22 0 -18;22 0 -18;-22 0 -18" dur="0.9s" repeatCount="indefinite"/></rect>
+      <rect x="-3" y="-18" width="6" height="18" rx="1.5" fill="#33333d"><animateTransform attributeName="transform" type="rotate" values="22 0 -18;-22 0 -18;22 0 -18" dur="0.9s" repeatCount="indefinite"/></rect>
+      <line x1="11" y1="2" x2="11" y2="-64" stroke="#8a6a3a" stroke-width="2"/>
+      <path d="M11 -73L7.5 -63H14.5Z" fill="#d9dde4"/>
+      <path d="M-8 -38H8L10 -16H-10Z" fill="#8b1a1a"/>
+      <rect x="-1.5" y="-36" width="3" height="18" fill="#e6b84a"/><rect x="-7" y="-29" width="14" height="3" fill="#e6b84a"/>
+      <rect x="-2" y="-37" width="14" height="5" rx="2.5" fill="#7d828c"/>
+      <rect x="-6.5" y="-51" width="13" height="13" rx="3" fill="#aab0ba"/><rect x="0" y="-46" width="6.5" height="2" fill="#15151a"/>
+      <path d="M-2 -51Q-8 -60 -14 -55Q-8 -54 -6 -50Z" fill="#c62828"/>
+      <path d="M-12 -35H1V-25Q1 -17 -5.5 -13Q-12 -17 -12 -25Z" fill="#c9a227" stroke="#5a4510" stroke-width="1"/>
+      <path d="M-12 -30L-5.5 -24L1 -30" stroke="#8b1a1a" stroke-width="2.5" fill="none"/>
+    </g></g>
+    <g id="archer"><g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -1.6;0 0" dur="0.45s" repeatCount="indefinite"/>
+      <rect x="-3" y="-18" width="6" height="18" rx="1.5" fill="#2a2418"><animateTransform attributeName="transform" type="rotate" values="-22 0 -18;22 0 -18;-22 0 -18" dur="0.9s" repeatCount="indefinite"/></rect>
+      <rect x="-3" y="-18" width="6" height="18" rx="1.5" fill="#3a3222"><animateTransform attributeName="transform" type="rotate" values="22 0 -18;-22 0 -18;22 0 -18" dur="0.9s" repeatCount="indefinite"/></rect>
+      <path d="M-9 -40L-4 -42L-2 -20L-7 -18Z" fill="#6b4a24"/>
+      <path d="M-8 -38H8L10 -16H-10Z" fill="#2e5a2a"/><rect x="-7" y="-23" width="14" height="3" fill="#6b4a24"/>
+      <path d="M9 -50Q20 -32 9 -14" stroke="#8a6a3a" stroke-width="2" fill="none"/>
+      <line x1="9" y1="-50" x2="9" y2="-14" stroke="#e8d5a8" stroke-width="0.8"/>
+      <rect x="-1" y="-37" width="11" height="4" rx="2" fill="#2e5a2a"/>
+      <path d="M-7 -40Q-7 -54 0 -54Q7 -54 7 -40Z" fill="#244a20"/><circle cx="2" cy="-44" r="4" fill="#d9b48a"/>
+    </g></g>
+
+  </defs>
+  <style>
+    .serif { font-family: Georgia, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif; }
+    .flicker { animation: flick 1.8s ease-in-out infinite; }
+    .flicker2 { animation: flick 2.3s ease-in-out infinite 0.4s; }
+    @keyframes flick { 0%,100% { opacity: 1; } 30% { opacity: 0.7; } 55% { opacity: 0.95; } 75% { opacity: 0.8; } }
+    .pulse { animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+</style>
+  <rect x="10" y="4" width="830" height="292" rx="10" fill="url(#bricks)"/>
+  <rect x="10" y="4" width="830" height="292" rx="10" stroke="#c9a227" stroke-opacity="0.55" stroke-width="2"/>
+  <rect x="16" y="10" width="818" height="280" rx="7" stroke="#5a4510" stroke-width="1"/>
+  <g clip-path="url(#scene)">
+    <rect x="18" y="12" width="814" height="232" fill="url(#dusk)"/>
+    <g fill="#fff6dc" opacity="0.7">
+      <circle cx="80" cy="30" r="1"/><circle cx="220" cy="58" r="0.8"/><circle cx="380" cy="26" r="1.1"/>
+      <circle cx="520" cy="48" r="0.9"/><circle cx="660" cy="24" r="1"/><circle cx="780" cy="54" r="0.8"/>
+    </g>
+    <text x="36" y="40" class="serif" font-weight="700" font-size="13" letter-spacing="3" fill="url(#gold)">CONTRIBUTION RAMPARTS</text>
+    <text x="36" y="56" class="serif" font-style="italic" font-size="11" fill="#a8977a">Each tower rises with the deeds of one week · last 26 weeks</text>
+    <circle cx="668" cy="36" r="4" fill="#e53935" class="pulse"/>
+    <text x="680" y="40" class="serif" font-size="11" letter-spacing="2" fill="#e8d5a8">WATCHTOWER LIVE</text>
+    <path d="M18 196Q200 188 425 192T832 190V244H18Z" fill="#1c1d2c"/>
+    <path d="M45.0 196V189L50.0 186L54.0 190L60.0 187L67.0 191V196Z" fill="#2e2d36"/><path d="M74.5 196V189L79.5 186L83.5 190L89.5 187L96.5 191V196Z" fill="#2e2d36"/><path d="M104.0 196V189L109.0 186L113.0 190L119.0 187L126.0 191V196Z" fill="#2e2d36"/><path d="M133.6 196V189L138.6 186L142.6 190L148.6 187L155.6 191V196Z" fill="#2e2d36"/><path d="M163.1 196V189L168.1 186L172.1 190L178.1 187L185.1 191V196Z" fill="#2e2d36"/><path d="M192.6 196V189L197.6 186L201.6 190L207.6 187L214.6 191V196Z" fill="#2e2d36"/><path d="M222.1 196V189L227.1 186L231.1 190L237.1 187L244.1 191V196Z" fill="#2e2d36"/><path d="M251.6 196V189L256.6 186L260.6 190L266.6 187L273.6 191V196Z" fill="#2e2d36"/><path d="M281.2 196V189L286.2 186L290.2 190L296.2 187L303.2 191V196Z" fill="#2e2d36"/><path d="M310.7 196V189L315.7 186L319.7 190L325.7 187L332.7 191V196Z" fill="#2e2d36"/><path d="M340.2 196V189L345.2 186L349.2 190L355.2 187L362.2 191V196Z" fill="#2e2d36"/><path d="M369.7 196V189L374.7 186L378.7 190L384.7 187L391.7 191V196Z" fill="#2e2d36"/><path d="M399.2 196V189L404.2 186L408.2 190L414.2 187L421.2 191V196Z" fill="#2e2d36"/><rect x="428.8" y="154" width="22" height="42" fill="url(#bricks-lit)"/><path d="M427.8 154V147H433.8V151H437.3V147H442.3V151H445.8V147H451.8V154Z" fill="#3a3a46"/><text x="439.8" y="192" text-anchor="middle" class="serif" font-size="8" fill="#e8d5a8" opacity="0.75">8</text><rect x="458.3" y="160" width="22" height="36" fill="url(#bricks-lit)"/><path d="M457.3 160V153H463.3V157H466.8V153H471.8V157H475.3V153H481.3V160Z" fill="#3a3a46"/><text x="469.3" y="192" text-anchor="middle" class="serif" font-size="8" fill="#e8d5a8" opacity="0.75">5</text><rect x="487.8" y="156" width="22" height="40" fill="url(#bricks-lit)"/><path d="M486.8 156V149H492.8V153H496.3V149H501.3V153H504.8V149H510.8V156Z" fill="#3a3a46"/><text x="498.8" y="192" text-anchor="middle" class="serif" font-size="8" fill="#e8d5a8" opacity="0.75">7</text><rect x="517.3" y="138" width="22" height="58" fill="url(#bricks-lit)"/><path d="M516.3 138V131H522.3V135H525.8V131H530.8V135H534.3V131H540.3V138Z" fill="#3a3a46"/><path class="flicker2" d="M524.3 162V154A4 4 0 0 1 532.3 154V162Z" fill="#ffb347" filter="url(#glow)"/><text x="528.3" y="192" text-anchor="middle" class="serif" font-size="8" fill="#e8d5a8" opacity="0.75">15</text><rect x="546.8" y="170" width="22" height="26" fill="url(#bricks-lit)"/><path d="M545.8 170V163H551.8V167H555.3V163H560.3V167H563.8V163H569.8V170Z" fill="#3a3a46"/><text x="557.8" y="192" text-anchor="middle" class="serif" font-size="8" fill="#e8d5a8" opacity="0.75">1</text><rect x="576.4" y="160" width="22" height="36" fill="url(#bricks-lit)"/><path d="M575.4 160V153H581.4V157H584.9V153H589.9V157H593.4V153H599.4V160Z" fill="#3a3a46"/><text x="587.4" y="192" text-anchor="middle" class="serif" font-size="8" fill="#e8d5a8" opacity="0.75">5</text><path d="M605.9 196V189L610.9 186L614.9 190L620.9 187L627.9 191V196Z" fill="#2e2d36"/><rect x="635.4" y="144" width="22" height="52" fill="url(#bricks-lit)"/><path d="M634.4 144V137H640.4V141H643.9V137H648.9V141H652.4V137H658.4V144Z" fill="#3a3a46"/><text x="646.4" y="192" text-anchor="middle" class="serif" font-size="8" fill="#e8d5a8" opacity="0.75">12</text><rect x="664.9" y="167" width="22" height="29" fill="url(#bricks-lit)"/><path d="M663.9 167V160H669.9V164H673.4V160H678.4V164H681.9V160H687.9V167Z" fill="#3a3a46"/><text x="675.9" y="192" text-anchor="middle" class="serif" font-size="8" fill="#e8d5a8" opacity="0.75">2</text><path d="M694.4 196V189L699.4 186L703.4 190L709.4 187L716.4 191V196Z" fill="#2e2d36"/><path d="M724.0 196V189L729.0 186L733.0 190L739.0 187L746.0 191V196Z" fill="#2e2d36"/><rect x="753.5" y="80" width="22" height="116" fill="url(#bricks-lit)"/><path d="M752.5 80V73H758.5V77H762.0V73H767.0V77H770.5V73H776.5V80Z" fill="#3a3a46"/><path class="flicker2" d="M760.5 104V96A4 4 0 0 1 768.5 96V104Z" fill="#ffb347" filter="url(#glow)"/><line x1="764.5" y1="73" x2="764.5" y2="50" stroke="#6b5232" stroke-width="1.5"/><path fill="#a51c1c" transform="translate(765.5 50)"><animate attributeName="d" dur="1.5s" repeatCount="indefinite" values="M0 0Q6 -2 12 0T24 0V11Q18 9 12 11T0 11Z;M0 0Q6 2 12 0T24 0V11Q18 13 12 11T0 11Z;M0 0Q6 -2 12 0T24 0V11Q18 9 12 11T0 11Z"/></path><text x="764.5" y="192" text-anchor="middle" class="serif" font-size="8" fill="#e8d5a8" opacity="0.75">40</text><path d="M783.0 196V189L788.0 186L792.0 190L798.0 187L805.0 191V196Z" fill="#2e2d36"/>
+    <rect x="18" y="196" width="814" height="48" fill="#17130f"/>
+    <rect x="18" y="196" width="814" height="3" fill="#2a2418"/>
+    <rect x="18" y="214" width="814" height="26" fill="#221c15"/>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="-240 0;880 0" dur="22s" begin="-9s" repeatCount="indefinite"/>
+      <use href="#soldier" transform="translate(200 236) scale(0.85)"/>
+<use href="#soldier" transform="translate(172 236) scale(0.85)"/>
+<use href="#archer" transform="translate(144 236) scale(0.85)"/>
+<use href="#soldier" transform="translate(116 236) scale(0.85)"/>
+<use href="#archer" transform="translate(88 236) scale(0.85)"/>
+<use href="#soldier" transform="translate(60 236) scale(0.85)"/>
+<use href="#soldier" transform="translate(32 236) scale(0.85)"/>
+<use href="#soldier" transform="translate(4 236) scale(0.85)"/>
+    </g>
+  </g>
+  <g>
+    <rect x="30" y="251" width="180" height="40" rx="4" fill="url(#parch)" stroke="#8a6a3a"/>
+    <text x="120" y="270" text-anchor="middle" class="serif" font-weight="700" font-size="16" fill="#3a2410">95</text>
+    <text x="120" y="284" text-anchor="middle" class="serif" font-size="9" letter-spacing="1.8" fill="#6b4a24">LAST 26 WEEKS</text></g>
+  <g>
+    <rect x="232" y="251" width="180" height="40" rx="4" fill="url(#parch)" stroke="#8a6a3a"/>
+    <text x="322" y="270" text-anchor="middle" class="serif" font-weight="700" font-size="16" fill="#7a1414">40</text>
+    <text x="322" y="284" text-anchor="middle" class="serif" font-size="9" letter-spacing="1.8" fill="#6b4a24">MIGHTIEST WEEK</text></g>
+  <g>
+    <rect x="434" y="251" width="180" height="40" rx="4" fill="url(#parch)" stroke="#8a6a3a"/>
+    <text x="524" y="270" text-anchor="middle" class="serif" font-weight="700" font-size="16" fill="#2e6b2a">15%</text>
+    <text x="524" y="284" text-anchor="middle" class="serif" font-size="9" letter-spacing="1.8" fill="#6b4a24">DAYS IN BATTLE</text></g>
+  <g>
+    <rect x="636" y="251" width="180" height="40" rx="4" fill="url(#parch)" stroke="#8a6a3a"/>
+    <text x="726" y="270" text-anchor="middle" class="serif" font-weight="700" font-size="16" fill="#3a2410">NOV 15, 2026</text>
+    <text x="726" y="284" text-anchor="middle" class="serif" font-size="9" letter-spacing="1.8" fill="#6b4a24">LAST DISPATCH</text></g>
+</svg>

@@ -1,40 +1,70 @@
-<svg width="850" height="90" viewBox="0 0 850 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="850" height="170" viewBox="0 0 850 170" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="footer-fill" x1="0" y1="0" x2="850" y2="90" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.06"/>
-      <stop offset="50%" stop-color="#FF7A00" stop-opacity="0.04"/>
-      <stop offset="100%" stop-color="#120A06" stop-opacity="0.6"/>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff1b8"/><stop offset="45%" stop-color="#e6b84a"/><stop offset="100%" stop-color="#9c6b1c"/>
     </linearGradient>
-    <linearGradient id="footer-stroke" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FF6A00" stop-opacity="0.1"/>
-      <stop offset="30%" stop-color="#FF9E44" stop-opacity="0.6"/>
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.3"/>
-      <stop offset="70%" stop-color="#FF9E44" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#FF6A00" stop-opacity="0.1"/>
+    <linearGradient id="parch" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4e6c2"/><stop offset="60%" stop-color="#e6d09c"/><stop offset="100%" stop-color="#cfb47a"/>
     </linearGradient>
-    <radialGradient id="footer-glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FF6A00" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#FF6A00" stop-opacity="0"/>
+    <linearGradient id="roll" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b8935a"/><stop offset="45%" stop-color="#f0dcae"/><stop offset="100%" stop-color="#8a6a3a"/>
+    </linearGradient>
+    <linearGradient id="rollv" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8a6a3a"/><stop offset="45%" stop-color="#f0dcae"/><stop offset="100%" stop-color="#8a6a3a"/>
+    </linearGradient>
+    <pattern id="bricks" width="24" height="12" patternUnits="userSpaceOnUse">
+      <rect width="24" height="12" fill="#25242c"/>
+      <path d="M0 0.5H24M0 6.5H24M0.5 0V6M12.5 6V12" stroke="#1a1a20" stroke-width="1"/>
+    </pattern>
+    <pattern id="bricks-lit" width="24" height="12" patternUnits="userSpaceOnUse">
+      <rect width="24" height="12" fill="#3a3a46"/>
+      <path d="M0 0.5H24M0 6.5H24M0.5 0V6M12.5 6V12" stroke="#262631" stroke-width="1"/>
+    </pattern>
+    <pattern id="merlons" width="14" height="10" patternUnits="userSpaceOnUse">
+      <rect width="8" height="10" fill="#3a3a46"/>
+    </pattern>
+    <radialGradient id="torch-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffb347" stop-opacity="0.7"/><stop offset="100%" stop-color="#ff6a00" stop-opacity="0"/>
     </radialGradient>
+    <filter id="drop" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <pattern id="portcullis" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#0b0806"/><path d="M4 0V8M0 4H8" stroke="#4a3b28" stroke-width="1.6"/>
+    </pattern>
   </defs>
-
   <style>
-    .footer-text { font-family: 'Segoe UI', -apple-system, sans-serif; font-size: 13px; font-weight: 500; fill: #D7C4B7; text-anchor: middle; }
-    .heart-glow { fill: #FF7A00; }
-  </style>
-
-  <circle cx="425" cy="45" r="160" fill="url(#footer-glow)"/>
-
-  <!-- Pill Card -->
-  <rect x="125" y="15" width="600" height="60" rx="30" fill="url(#footer-fill)"/>
-  <rect x="125" y="15" width="600" height="60" rx="30" stroke="url(#footer-stroke)" stroke-width="1.2"/>
-
-  <!-- Content -->
-  <text x="425" y="44" class="footer-text">
-    Crafted with <tspan class="heart-glow">🧡</tspan> by <tspan fill="#FFA726" font-weight="700">Quân</tspan> (@qu2nishere) • Orange Glassmorphic Edition
-  </text>
-  <text x="425" y="60" font-family="'Consolas', monospace" font-size="10.5" fill="#8C786C" text-anchor="middle">
-    ⭐ Feel free to star this repo if you find inspiration! ⭐
-  </text>
+    .serif { font-family: Georgia, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif; }
+    .flicker { animation: flick 1.8s ease-in-out infinite; }
+    .flicker2 { animation: flick 2.3s ease-in-out infinite 0.4s; }
+    @keyframes flick { 0%,100% { opacity: 1; } 30% { opacity: 0.7; } 55% { opacity: 0.95; } 75% { opacity: 0.8; } }
+    .flame { transform-box: fill-box; transform-origin: 50% 100%; animation: flame 0.5s ease-in-out infinite alternate; }
+    @keyframes flame { from { transform: scale(1,1); } to { transform: scale(0.85,1.2); } }
+</style>
+  <!-- gatehouse -->
+  <rect x="330" y="40" width="190" height="72" fill="url(#bricks-lit)"/>
+  <rect x="330" y="30" width="194" height="10" fill="url(#merlons)"/>
+  <rect x="300" y="16" width="44" height="96" fill="url(#bricks-lit)"/>
+  <rect x="506" y="16" width="44" height="96" fill="url(#bricks-lit)"/>
+  <rect x="298" y="6" width="50" height="10" fill="url(#merlons)"/>
+  <rect x="504" y="6" width="50" height="10" fill="url(#merlons)"/>
+  <path d="M390 112V78A35 35 0 0 1 460 78V112Z" fill="#2a2420" stroke="#55493a" stroke-width="3"/>
+  <path d="M395 112V79A30 30 0 0 1 455 79V112Z" fill="url(#portcullis)"/>
+  <!-- drawbridge chains -->
+  <path d="M393 70L360 112M457 70L490 112" stroke="#6b6b75" stroke-width="2" stroke-dasharray="3 2"/>
+  <path d="M316 50V38A6 6 0 0 1 328 38V50Z M522 50V38A6 6 0 0 1 534 38V50Z" fill="#ffb347" class="flicker" filter="url(#glow)"/>
+  <circle cx="372" cy="84" r="20" fill="url(#torch-glow)" class="flicker2"/>
+  <rect x="370" y="84" width="4" height="13" fill="#5c4a30"/>
+  <path class="flame" d="M372 85Q366 78 372 68Q378 78 372 85Z" fill="#ffcf5a"/><circle cx="478" cy="84" r="20" fill="url(#torch-glow)" class="flicker2"/>
+  <rect x="476" y="84" width="4" height="13" fill="#5c4a30"/>
+  <path class="flame" d="M478 85Q472 78 478 68Q484 78 478 85Z" fill="#ffcf5a"/>
+  <rect x="20" y="112" width="810" height="3" fill="#2a2418"/>
+  <path d="M120 113.5H290M560 113.5H730" stroke="#c9a227" stroke-opacity="0.5"/>
+  <text x="425" y="140" text-anchor="middle" class="serif" font-size="14" fill="#e8d5a8">Forged with honor by <tspan fill="url(#gold)" font-weight="700">Sir Quân</tspan> (@qu2nishere) · Medieval Edition</text>
+  <text x="425" y="160" text-anchor="middle" class="serif" font-style="italic" font-size="11.5" fill="#a8977a">✦ Should this realm inspire thee, bestow upon it a star ✦</text>
 </svg>
-

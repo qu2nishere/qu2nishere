@@ -1,0 +1,82 @@
+<svg width="850" height="260" viewBox="0 0 850 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff1b8"/><stop offset="45%" stop-color="#e6b84a"/><stop offset="100%" stop-color="#9c6b1c"/>
+    </linearGradient>
+    <linearGradient id="parch" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4e6c2"/><stop offset="60%" stop-color="#e6d09c"/><stop offset="100%" stop-color="#cfb47a"/>
+    </linearGradient>
+    <pattern id="bricks" width="24" height="12" patternUnits="userSpaceOnUse">
+      <rect width="24" height="12" fill="#25242c"/>
+      <path d="M0 0.5H24M0 6.5H24M0.5 0V6M12.5 6V12" stroke="#1a1a20" stroke-width="1"/>
+    </pattern>
+    <pattern id="bricks-lit" width="24" height="12" patternUnits="userSpaceOnUse">
+      <rect width="24" height="12" fill="#3a3a46"/>
+      <path d="M0 0.5H24M0 6.5H24M0.5 0V6M12.5 6V12" stroke="#262631" stroke-width="1"/>
+    </pattern>
+    <filter id="drop" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+</defs>
+  <style>
+    .serif { font-family: Georgia, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif; }
+    .flicker { animation: flick 1.8s ease-in-out infinite; }
+    .flicker2 { animation: flick 2.3s ease-in-out infinite 0.4s; }
+    @keyframes flick { 0%,100% { opacity: 1; } 30% { opacity: 0.7; } 55% { opacity: 0.95; } 75% { opacity: 0.8; } }
+    .pulse { animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+</style>
+  <rect x="10" y="4" width="830" height="252" rx="10" fill="url(#bricks)"/>
+  <rect x="10" y="4" width="830" height="252" rx="10" stroke="#c9a227" stroke-opacity="0.55" stroke-width="2"/>
+  <rect x="16" y="10" width="818" height="240" rx="7" stroke="#5a4510" stroke-width="1"/>
+  <text x="425" y="40" text-anchor="middle" class="serif" font-weight="700" font-size="20" letter-spacing="5" fill="url(#gold)">WAR CHRONICLE</text>
+  <text x="425" y="58" text-anchor="middle" class="serif" font-size="10.5" letter-spacing="3" fill="#a8977a">ROYAL ARCHIVES · UPDATED NOV 15, 2026</text>
+  <path d="M250 35H320M530 35H600" stroke="#c9a227" stroke-opacity="0.6"/>
+  <path d="M244 35L249 30L254 35L249 40ZM596 35L601 30L606 35L601 40Z" fill="#c9a227"/>
+  <rect x="34" y="72" width="782" height="6" rx="3" fill="#5a3a1c"/>
+  <circle cx="34" cy="75" r="6" fill="#c9a227"/><circle cx="816" cy="75" r="6" fill="#c9a227"/>
+  
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-1 128 78;1 128 78;-1 128 78" dur="5s" repeatCount="indefinite"/>
+    <path d="M46 78H210V206L128 236L46 206Z" fill="#7a1414" filter="url(#drop)"/>
+    <path d="M52 84H204V203L128 229L52 203Z" stroke="#e6b84a" stroke-width="1.2"/>
+    <g transform="translate(128 108)"><g stroke-width="2.5" stroke-linecap="round"><path d="M-11 -11L11 11M11 -11L-11 11" stroke="#d9dde4"/><path d="M-13 5L-5 13M13 5L5 13" stroke="#e6b84a"/></g></g>
+    <text x="128" y="156" text-anchor="middle" class="serif" font-weight="700" font-size="34" fill="url(#gold)">317</text>
+    <text x="128" y="180" text-anchor="middle" class="serif" font-weight="700" font-size="10.5" letter-spacing="1.2" fill="#f6e2a6">BATTLES WAGED</text>
+    <text x="128" y="198" text-anchor="middle" class="serif" font-style="italic" font-size="11" fill="#d8c49a">Deeds since 2024</text>
+  </g>
+  
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-1 326 78;1 326 78;-1 326 78" dur="5.6s" repeatCount="indefinite"/>
+    <path d="M244 78H408V206L326 236L244 206Z" fill="#1c2f6e" filter="url(#drop)"/>
+    <path d="M250 84H402V203L326 229L250 203Z" stroke="#e6b84a" stroke-width="1.2"/>
+    <g transform="translate(326 108)"><path d="M0 13Q-11 8 -8 -2Q-5 -9 0 -14Q1 -6 6 -3Q10 2 7 8Q5 12 0 13Z" fill="#ff8f2e"/><path d="M0 13Q-5 9 -3 3Q-1 -1 1 -4Q2 2 4 4Q5 9 0 13Z" fill="#ffd36b"/></g>
+    <text x="326" y="156" text-anchor="middle" class="serif" font-weight="700" font-size="34" fill="url(#gold)">1<tspan font-size="15" fill="#e8d5a8" font-weight="400"> Day</tspan></text>
+    <text x="326" y="180" text-anchor="middle" class="serif" font-weight="700" font-size="10.5" letter-spacing="1.2" fill="#f6e2a6">CURRENT CAMPAIGN</text>
+    <text x="326" y="198" text-anchor="middle" class="serif" font-style="italic" font-size="11" fill="#d8c49a">Nov 14</text>
+  </g>
+  
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-1 524 78;1 524 78;-1 524 78" dur="6.2s" repeatCount="indefinite"/>
+    <path d="M442 78H606V206L524 236L442 206Z" fill="#7a1414" filter="url(#drop)"/>
+    <path d="M448 84H600V203L524 229L448 203Z" stroke="#e6b84a" stroke-width="1.2"/>
+    <g transform="translate(524 108)"><path d="M-10 13V-13H-6V-9H-2V-13H2V-9H6V-13H10V13Z" fill="#d9c49a"/><path d="M-3 13V6A3 3 0 0 1 3 6V13Z" fill="#3a2410"/></g>
+    <text x="524" y="156" text-anchor="middle" class="serif" font-weight="700" font-size="34" fill="url(#gold)">8<tspan font-size="15" fill="#e8d5a8" font-weight="400"> Days</tspan></text>
+    <text x="524" y="180" text-anchor="middle" class="serif" font-weight="700" font-size="10.5" letter-spacing="1.2" fill="#f6e2a6">LONGEST SIEGE</text>
+    <text x="524" y="198" text-anchor="middle" class="serif" font-style="italic" font-size="11" fill="#d8c49a">Jan 2 – Jan 9</text>
+  </g>
+  
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-1 722 78;1 722 78;-1 722 78" dur="5.3s" repeatCount="indefinite"/>
+    <path d="M640 78H804V206L722 236L640 206Z" fill="#1c2f6e" filter="url(#drop)"/>
+    <path d="M646 84H798V203L722 229L646 203Z" stroke="#e6b84a" stroke-width="1.2"/>
+    <g transform="translate(722 108)"><path d="M-12 8V-6L-6 0L0 -10L6 0L12 -6V8Z" fill="#e6b84a" stroke="#9c6b1c"/><rect x="-12" y="8" width="24" height="4" fill="#c9a227"/><circle cy="3" r="2" fill="#b71c1c"/></g>
+    <text x="722" y="156" text-anchor="middle" class="serif" font-weight="700" font-size="34" fill="url(#gold)">267</text>
+    <text x="722" y="180" text-anchor="middle" class="serif" font-weight="700" font-size="10.5" letter-spacing="1.2" fill="#f6e2a6">2026 CONQUESTS</text>
+    <text x="722" y="198" text-anchor="middle" class="serif" font-style="italic" font-size="11" fill="#d8c49a">Deeds this year</text>
+  </g>
+</svg>

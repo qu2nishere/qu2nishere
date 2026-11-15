@@ -1,32 +1,39 @@
-<svg width="850" height="24" viewBox="0 0 850 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="850" height="44" viewBox="0 0 850 44" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="divider-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FF6A00" stop-opacity="0"/>
-      <stop offset="25%" stop-color="#FF6A00" stop-opacity="0.3"/>
-      <stop offset="50%" stop-color="#FFA726" stop-opacity="0.9"/>
-      <stop offset="75%" stop-color="#FF6A00" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#FF6A00" stop-opacity="0"/>
+    <linearGradient id="line-l" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c9a227" stop-opacity="0"/><stop offset="100%" stop-color="#c9a227" stop-opacity="0.8"/>
     </linearGradient>
-    <radialGradient id="center-glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFA726" stop-opacity="0.8"/>
-      <stop offset="60%" stop-color="#FF6A00" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#FF6A00" stop-opacity="0"/>
-    </radialGradient>
-    <filter id="div-glow" x="-20%" y="-50%" width="140%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-    </filter>
+    <linearGradient id="line-r" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c9a227" stop-opacity="0.8"/><stop offset="100%" stop-color="#c9a227" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="blade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f4f6fa"/><stop offset="50%" stop-color="#a9b0bc"/><stop offset="100%" stop-color="#5d6470"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff1b8"/><stop offset="45%" stop-color="#e6b84a"/><stop offset="100%" stop-color="#9c6b1c"/>
+    </linearGradient>
+    <linearGradient id="glint" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0"/><stop offset="50%" stop-color="#fff" stop-opacity="0.9"/><stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="blade-clip"><path d="M318 22L340 17H500V27H340Z"/></clipPath>
   </defs>
-
-  <!-- Ambient Glow at Center -->
-  <circle cx="425" cy="12" r="12" fill="url(#center-glow)"/>
-
-  <!-- Tapered Line -->
-  <line x1="50" y1="12" x2="800" y2="12" stroke="url(#divider-grad)" stroke-width="1.5" stroke-linecap="round" filter="url(#div-glow)"/>
-
-  <!-- Center Diamond Accent -->
-  <g transform="translate(425, 12) rotate(45)">
-    <rect x="-4" y="-4" width="8" height="8" rx="1.5" fill="#FFE082" stroke="#FF7A00" stroke-width="1"/>
+  <rect x="20" y="21" width="280" height="1.5" fill="url(#line-l)"/>
+  <rect x="570" y="21" width="260" height="1.5" fill="url(#line-r)"/>
+  <path d="M150 22L154 18L158 22L154 26Z M690 22L694 18L698 22L694 26Z" fill="#c9a227" opacity="0.7"/>
+  <path d="M296 22L301 17L306 22L301 27Z" fill="#c9a227"/>
+  <path d="M564 22L569 17L574 22L569 27Z" fill="#c9a227"/>
+  <!-- sword -->
+  <path d="M318 22L340 17H500V27H340Z" fill="url(#blade)"/>
+  <line x1="342" y1="22" x2="498" y2="22" stroke="#6b717c" stroke-width="1"/>
+  <g clip-path="url(#blade-clip)">
+    <rect x="300" y="10" width="40" height="24" fill="url(#glint)">
+      <animateTransform attributeName="transform" type="translate" values="0 0;220 0;220 0" keyTimes="0;0.4;1" dur="4s" repeatCount="indefinite"/>
+    </rect>
   </g>
+  <path d="M500 8Q506 10 506 14V30Q506 34 500 36H508V8Z" fill="url(#gold)"/>
+  <rect x="500" y="8" width="8" height="28" rx="2" fill="url(#gold)"/>
+  <rect x="508" y="18" width="34" height="8" rx="2" fill="#5a3a1c"/>
+  <path d="M512 18V26M518 18V26M524 18V26M530 18V26M536 18V26" stroke="#3a240e" stroke-width="1"/>
+  <circle cx="548" cy="22" r="7" fill="url(#gold)"/>
+  <circle cx="548" cy="22" r="3" fill="#b71c1c"/>
 </svg>
-

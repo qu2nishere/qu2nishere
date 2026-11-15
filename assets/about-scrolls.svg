@@ -1,0 +1,125 @@
+<svg width="850" height="270" viewBox="0 0 850 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff1b8"/><stop offset="45%" stop-color="#e6b84a"/><stop offset="100%" stop-color="#9c6b1c"/>
+    </linearGradient>
+    <linearGradient id="parch" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4e6c2"/><stop offset="60%" stop-color="#e6d09c"/><stop offset="100%" stop-color="#cfb47a"/>
+    </linearGradient>
+    <linearGradient id="roll" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b8935a"/><stop offset="45%" stop-color="#f0dcae"/><stop offset="100%" stop-color="#8a6a3a"/>
+    </linearGradient>
+    <linearGradient id="rollv" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8a6a3a"/><stop offset="45%" stop-color="#f0dcae"/><stop offset="100%" stop-color="#8a6a3a"/>
+    </linearGradient>
+    <pattern id="bricks" width="24" height="12" patternUnits="userSpaceOnUse">
+      <rect width="24" height="12" fill="#25242c"/>
+      <path d="M0 0.5H24M0 6.5H24M0.5 0V6M12.5 6V12" stroke="#1a1a20" stroke-width="1"/>
+    </pattern>
+    <pattern id="bricks-lit" width="24" height="12" patternUnits="userSpaceOnUse">
+      <rect width="24" height="12" fill="#3a3a46"/>
+      <path d="M0 0.5H24M0 6.5H24M0.5 0V6M12.5 6V12" stroke="#262631" stroke-width="1"/>
+    </pattern>
+    <pattern id="merlons" width="14" height="10" patternUnits="userSpaceOnUse">
+      <rect width="8" height="10" fill="#3a3a46"/>
+    </pattern>
+    <radialGradient id="torch-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffb347" stop-opacity="0.7"/><stop offset="100%" stop-color="#ff6a00" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="drop" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+</defs>
+  <style>
+    .serif { font-family: Georgia, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif; }
+    .flicker { animation: flick 1.8s ease-in-out infinite; }
+    .flicker2 { animation: flick 2.3s ease-in-out infinite 0.4s; }
+    @keyframes flick { 0%,100% { opacity: 1; } 30% { opacity: 0.7; } 55% { opacity: 0.95; } 75% { opacity: 0.8; } }
+    .flame { transform-box: fill-box; transform-origin: 50% 100%; animation: flame 0.5s ease-in-out infinite alternate; }
+    @keyframes flame { from { transform: scale(1,1); } to { transform: scale(0.85,1.2); } }
+</style>
+  <rect x="10" y="4" width="830" height="262" rx="10" fill="url(#bricks)"/>
+  <rect x="10" y="4" width="830" height="262" rx="10" stroke="#c9a227" stroke-opacity="0.55" stroke-width="2"/>
+  <rect x="16" y="10" width="818" height="250" rx="7" stroke="#5a4510" stroke-width="1"/>
+  <!-- wooden beam -->
+  <rect x="24" y="14" width="802" height="8" rx="3" fill="#4a3018"/>
+  <!-- torches on the far sides -->
+  <circle cx="28" cy="150" r="26" fill="url(#torch-glow)" class="flicker"/>
+  <path d="M23 150H33L30 176H26Z" fill="#5c4a30"/>
+  <path class="flame" d="M28 151Q21 142 28 130Q35 142 28 151Z" fill="#ffcf5a"/><circle cx="822" cy="150" r="26" fill="url(#torch-glow)" class="flicker"/>
+  <path d="M817 150H827L824 176H820Z" fill="#5c4a30"/>
+  <path class="flame" d="M822 151Q815 142 822 130Q829 142 822 151Z" fill="#ffcf5a"/>
+  
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-0.8 165 30;0.8 165 30;-0.8 165 30" dur="6s" repeatCount="indefinite"/>
+    <line x1="165" y1="18" x2="75" y2="44" stroke="#8a6a3a" stroke-width="1.5"/>
+    <line x1="165" y1="18" x2="255" y2="44" stroke="#8a6a3a" stroke-width="1.5"/>
+    <circle cx="165" cy="18" r="4" fill="#c9a227" stroke="#5a4510"/>
+    <g filter="url(#drop)">
+      <path d="M55 50H275V236Q220 228 165 236T55 236Z" fill="url(#parch)"/>
+      <rect x="45" y="40" width="240" height="16" rx="7" fill="url(#roll)"/>
+      <rect x="39" y="44" width="10" height="8" rx="3" fill="#5a3a1c"/>
+      <rect x="281" y="44" width="10" height="8" rx="3" fill="#5a3a1c"/>
+    </g>
+    <g transform="translate(165 84) rotate(-45)">
+      <path d="M0 -14L2.5 -10V6H-2.5V-10Z" fill="#cfd3da" stroke="#5d6470" stroke-width="0.8"/>
+      <rect x="-7" y="6" width="14" height="3" rx="1" fill="#c9a227"/>
+      <rect x="-1.5" y="9" width="3" height="6" fill="#5a3a1c"/>
+      <circle cy="16.5" r="2.2" fill="#c9a227"/></g>
+    <text x="165" y="114" text-anchor="middle" font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif" font-weight="700" font-size="14" letter-spacing="2.5" fill="#7a1414">CURRENT QUEST</text>
+    <path d="M85 126H245" stroke="#a88a52" stroke-width="1"/>
+    <path d="M161 126L165 122L169 126L165 130Z" fill="#8b1a1a"/>
+    <path d="M71 148L75 144L79 148L75 152Z" fill="#8b1a1a"/><text x="89" y="152" font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif" font-size="12.5" fill="#3a2410">High-speed Web Applications</text>
+<path d="M71 178L75 174L79 178L75 182Z" fill="#8b1a1a"/><text x="89" y="182" font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif" font-size="12.5" fill="#3a2410">Polished UI / UX Craft</text>
+<path d="M71 208L75 204L79 208L75 212Z" fill="#8b1a1a"/><text x="89" y="212" font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif" font-size="12.5" fill="#3a2410">Modern Full-Stack Patterns</text>
+  </g>
+  
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-0.8 425 30;0.8 425 30;-0.8 425 30" dur="7s" repeatCount="indefinite"/>
+    <line x1="425" y1="18" x2="335" y2="44" stroke="#8a6a3a" stroke-width="1.5"/>
+    <line x1="425" y1="18" x2="515" y2="44" stroke="#8a6a3a" stroke-width="1.5"/>
+    <circle cx="425" cy="18" r="4" fill="#c9a227" stroke="#5a4510"/>
+    <g filter="url(#drop)">
+      <path d="M315 50H535V236Q480 228 425 236T315 236Z" fill="url(#parch)"/>
+      <rect x="305" y="40" width="240" height="16" rx="7" fill="url(#roll)"/>
+      <rect x="299" y="44" width="10" height="8" rx="3" fill="#5a3a1c"/>
+      <rect x="541" y="44" width="10" height="8" rx="3" fill="#5a3a1c"/>
+    </g>
+    <g transform="translate(425 84)">
+      <path d="M-11 -12H11V0Q11 9 0 14Q-11 9 -11 0Z" fill="#8b1a1a" stroke="#c9a227" stroke-width="1.5"/>
+      <path d="M0 -9V10M-8 -2H8" stroke="#e6b84a" stroke-width="2.5"/></g>
+    <text x="425" y="114" text-anchor="middle" font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif" font-weight="700" font-size="14" letter-spacing="2.5" fill="#7a1414">CODE OF HONOR</text>
+    <path d="M345 126H505" stroke="#a88a52" stroke-width="1"/>
+    <path d="M421 126L425 122L429 126L425 130Z" fill="#8b1a1a"/>
+    <path d="M331 148L335 144L339 148L335 152Z" fill="#8b1a1a"/><text x="349" y="152" font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif" font-size="12.5" fill="#3a2410">Clean &amp; Maintainable Code</text>
+<path d="M331 178L335 174L339 178L335 182Z" fill="#8b1a1a"/><text x="349" y="182" font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif" font-size="12.5" fill="#3a2410">Performance &amp; Smooth UX</text>
+<path d="M331 208L335 204L339 208L335 212Z" fill="#8b1a1a"/><text x="349" y="212" font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif" font-size="12.5" fill="#3a2410">Constantly Pushing Boundaries</text>
+  </g>
+  
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-0.8 685 30;0.8 685 30;-0.8 685 30" dur="6.5s" repeatCount="indefinite"/>
+    <line x1="685" y1="18" x2="595" y2="44" stroke="#8a6a3a" stroke-width="1.5"/>
+    <line x1="685" y1="18" x2="775" y2="44" stroke="#8a6a3a" stroke-width="1.5"/>
+    <circle cx="685" cy="18" r="4" fill="#c9a227" stroke="#5a4510"/>
+    <g filter="url(#drop)">
+      <path d="M575 50H795V236Q740 228 685 236T575 236Z" fill="url(#parch)"/>
+      <rect x="565" y="40" width="240" height="16" rx="7" fill="url(#roll)"/>
+      <rect x="559" y="44" width="10" height="8" rx="3" fill="#5a3a1c"/>
+      <rect x="801" y="44" width="10" height="8" rx="3" fill="#5a3a1c"/>
+    </g>
+    <g transform="translate(685 84)">
+      <path d="M-12 8V-6L-6 0L0 -10L6 0L12 -6V8Z" fill="#e6b84a" stroke="#9c6b1c" stroke-width="1"/>
+      <rect x="-12" y="8" width="24" height="4" fill="#c9a227"/>
+      <circle cx="0" cy="3" r="2" fill="#b71c1c"/><circle cx="-6" cy="4" r="1.5" fill="#1f3a8a"/><circle cx="6" cy="4" r="1.5" fill="#1f3a8a"/></g>
+    <text x="685" y="114" text-anchor="middle" font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif" font-weight="700" font-size="14" letter-spacing="2.5" fill="#7a1414">2026 CONQUESTS</text>
+    <path d="M605 126H765" stroke="#a88a52" stroke-width="1"/>
+    <path d="M681 126L685 122L689 126L685 130Z" fill="#8b1a1a"/>
+    <path d="M591 148L595 144L599 148L595 152Z" fill="#8b1a1a"/><text x="609" y="152" font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif" font-size="12.5" fill="#3a2410">Cloud &amp; Microservices Arch</text>
+<path d="M591 178L595 174L599 178L595 182Z" fill="#8b1a1a"/><text x="609" y="182" font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif" font-size="12.5" fill="#3a2410">Publish Useful Dev Utilities</text>
+<path d="M591 208L595 204L599 208L595 212Z" fill="#8b1a1a"/><text x="609" y="212" font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif" font-size="12.5" fill="#3a2410">Forge Alliances Worldwide</text>
+  </g>
+</svg>

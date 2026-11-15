@@ -1,210 +1,271 @@
-<svg width="850" height="340" viewBox="0 0 850 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="850" height="360" viewBox="0 0 850 360" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background Gradient -->
-    <radialGradient id="space-bg" cx="50%" cy="50%" r="70%">
-      <stop offset="0%" stop-color="#180C05"/>
-      <stop offset="60%" stop-color="#0E0603"/>
-      <stop offset="100%" stop-color="#050201"/>
-    </radialGradient>
-
-    <!-- Glowing Orbs Gradients -->
-    <radialGradient id="orb-orange-1" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FF5D00" stop-opacity="0.85"/>
-      <stop offset="45%" stop-color="#FF8A00" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#FF5D00" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="orb-orange-2" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFA826" stop-opacity="0.75"/>
-      <stop offset="50%" stop-color="#FF6A00" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#FF4500" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="orb-gold" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFCA28" stop-opacity="0.6"/>
-      <stop offset="60%" stop-color="#FF6A00" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#FF3D00" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Glass Surface Fill -->
-    <linearGradient id="glass-fill" x1="0" y1="0" x2="810" y2="300" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.09"/>
-      <stop offset="25%" stop-color="#FF7A00" stop-opacity="0.05"/>
-      <stop offset="70%" stop-color="#150A05" stop-opacity="0.65"/>
-      <stop offset="100%" stop-color="#0C0502" stop-opacity="0.85"/>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#060914"/>
+      <stop offset="55%" stop-color="#151c38"/>
+      <stop offset="85%" stop-color="#3b2a3c"/>
+      <stop offset="100%" stop-color="#5a3528"/>
     </linearGradient>
-
-    <!-- Glass Border Gradient (Refraction Edge) -->
-    <linearGradient id="glass-border" x1="0" y1="0" x2="810" y2="300" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFB366" stop-opacity="0.9"/>
-      <stop offset="25%" stop-color="#FFFFFF" stop-opacity="0.4"/>
-      <stop offset="50%" stop-color="#FF6A00" stop-opacity="0.2"/>
-      <stop offset="75%" stop-color="#FFA040" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#FF5722" stop-opacity="0.4"/>
+    <radialGradient id="moon-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f6e7c1" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#f6e7c1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="torch-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffb347" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#ff6a00" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff1b8"/>
+      <stop offset="45%" stop-color="#e6b84a"/>
+      <stop offset="100%" stop-color="#9c6b1c"/>
     </linearGradient>
-
-    <!-- Shimmer linear gradient -->
-    <linearGradient id="shimmer-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
     </linearGradient>
-
-    <!-- Text Gradients -->
-    <linearGradient id="text-glow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="40%" stop-color="#FFE0B2"/>
-      <stop offset="100%" stop-color="#FFA726"/>
+    <linearGradient id="roof" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7a2020"/>
+      <stop offset="50%" stop-color="#5a1414"/>
+      <stop offset="100%" stop-color="#360a0a"/>
     </linearGradient>
-
-    <!-- Drop Shadows & Glow Filters -->
-    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="115%">
-      <feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#000000" flood-opacity="0.7"/>
-      <feDropShadow dx="0" dy="4" stdDeviation="30" flood-color="#FF5D00" flood-opacity="0.25"/>
+    <pattern id="bricks" width="24" height="12" patternUnits="userSpaceOnUse">
+      <rect width="24" height="12" fill="#3a3a46"/>
+      <path d="M0 0.5H24M0 6.5H24M0.5 0V6M12.5 6V12" stroke="#262631" stroke-width="1"/>
+    </pattern>
+    <pattern id="merlons" width="14" height="10" patternUnits="userSpaceOnUse">
+      <rect width="8" height="10" fill="#3a3a46"/>
+    </pattern>
+    <pattern id="portcullis" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#0b0806"/>
+      <path d="M4 0V8M0 4H8" stroke="#4a3b28" stroke-width="1.6"/>
+    </pattern>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    <filter id="title-shadow" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#000" flood-opacity="0.8"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#e6b84a" flood-opacity="0.35"/>
     </filter>
+
+    <!-- Waving flag (origin = top of pole) -->
+    <g id="flag">
+      <line x1="0" y1="0" x2="0" y2="26" stroke="#6b5232" stroke-width="2"/>
+      <path fill="#a51c1c">
+        <animate attributeName="d" dur="1.6s" repeatCount="indefinite"
+          values="M1 1 Q9 -2 17 1 T33 1 V15 Q25 12 17 15 T1 15 Z;
+                  M1 1 Q9 4 17 1 T33 1 V15 Q25 18 17 15 T1 15 Z;
+                  M1 1 Q9 -2 17 1 T33 1 V15 Q25 12 17 15 T1 15 Z"/>
+      </path>
+      <circle cx="11" cy="8" r="3" fill="#e6b84a"/>
+    </g>
+
+    <!-- Lit arched window (origin = arch center) -->
+    <path id="win" d="M-5 13V0A5 5 0 0 1 5 0V13Z"/>
+
+    <!-- Marching spearman, feet at (0,0), facing right -->
+    <g id="soldier">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0 0;0 -1.6;0 0" dur="0.45s" repeatCount="indefinite"/>
+        <rect x="-3" y="-18" width="6" height="18" rx="1.5" fill="#24242c">
+          <animateTransform attributeName="transform" type="rotate" values="-22 0 -18;22 0 -18;-22 0 -18" dur="0.9s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="-3" y="-18" width="6" height="18" rx="1.5" fill="#33333d">
+          <animateTransform attributeName="transform" type="rotate" values="22 0 -18;-22 0 -18;22 0 -18" dur="0.9s" repeatCount="indefinite"/>
+        </rect>
+        <line x1="11" y1="2" x2="11" y2="-64" stroke="#8a6a3a" stroke-width="2"/>
+        <path d="M11 -73L7.5 -63H14.5Z" fill="#d9dde4"/>
+        <path d="M-8 -38H8L10 -16H-10Z" fill="#8b1a1a"/>
+        <rect x="-1.5" y="-36" width="3" height="18" fill="#e6b84a"/>
+        <rect x="-7" y="-29" width="14" height="3" fill="#e6b84a"/>
+        <rect x="-2" y="-37" width="14" height="5" rx="2.5" fill="#7d828c"/>
+        <rect x="-6.5" y="-51" width="13" height="13" rx="3" fill="#aab0ba"/>
+        <rect x="0" y="-46" width="6.5" height="2" fill="#15151a"/>
+        <path d="M-2 -51Q-8 -60 -14 -55Q-8 -54 -6 -50Z" fill="#c62828"/>
+        <path d="M-12 -35H1V-25Q1 -17 -5.5 -13Q-12 -17 -12 -25Z" fill="#c9a227" stroke="#5a4510" stroke-width="1"/>
+        <path d="M-12 -30L-5.5 -24L1 -30" stroke="#8b1a1a" stroke-width="2.5" fill="none"/>
+      </g>
+    </g>
+
+    <!-- Standard bearer -->
+    <g id="bearer">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0 0;0 -1.6;0 0" dur="0.45s" repeatCount="indefinite"/>
+        <rect x="-3" y="-18" width="6" height="18" rx="1.5" fill="#24242c">
+          <animateTransform attributeName="transform" type="rotate" values="-22 0 -18;22 0 -18;-22 0 -18" dur="0.9s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="-3" y="-18" width="6" height="18" rx="1.5" fill="#33333d">
+          <animateTransform attributeName="transform" type="rotate" values="22 0 -18;-22 0 -18;22 0 -18" dur="0.9s" repeatCount="indefinite"/>
+        </rect>
+        <line x1="9" y1="2" x2="9" y2="-80" stroke="#8a6a3a" stroke-width="2.2"/>
+        <circle cx="9" cy="-81" r="2.5" fill="#e6b84a"/>
+        <path fill="#1f3a8a" stroke="#e6b84a" stroke-width="1">
+          <animate attributeName="d" dur="1.2s" repeatCount="indefinite"
+            values="M10 -78H34Q31 -70 34 -62Q30 -56 34 -48L22 -52L10 -48Z;
+                    M10 -78H32Q35 -70 32 -62Q35 -56 31 -48L21 -51L10 -48Z;
+                    M10 -78H34Q31 -70 34 -62Q30 -56 34 -48L22 -52L10 -48Z"/>
+        </path>
+        <path d="M-8 -38H8L10 -16H-10Z" fill="#1f3a8a"/>
+        <rect x="-7" y="-29" width="14" height="3" fill="#e6b84a"/>
+        <rect x="-2" y="-37" width="12" height="5" rx="2.5" fill="#7d828c"/>
+        <rect x="-6.5" y="-51" width="13" height="13" rx="3" fill="#aab0ba"/>
+        <rect x="0" y="-46" width="6.5" height="2" fill="#15151a"/>
+        <path d="M-2 -51Q-8 -60 -14 -55Q-8 -54 -6 -50Z" fill="#e6b84a"/>
+      </g>
+    </g>
+
+    <!-- Small static guard for the walls -->
+    <g id="guard">
+      <rect x="-3" y="-16" width="6" height="16" fill="#1b1b22"/>
+      <line x1="8" y1="0" x2="8" y2="-46" stroke="#5c4a30" stroke-width="1.6"/>
+      <path d="M8 -52L5.5 -45H10.5Z" fill="#b8bec8"/>
+      <path d="M-7 -33H7L8 -14H-8Z" fill="#6e1515"/>
+      <rect x="-5.5" y="-44" width="11" height="11" rx="3" fill="#8c929c"/>
+    </g>
   </defs>
 
   <style>
-    .title-text { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: 800; font-size: 35px; letter-spacing: -0.5px; }
-    .subtitle-text { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: 400; font-size: 15px; fill: #D7C4B7; }
-    .badge-text { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: 600; font-size: 12px; }
-    .code-font { font-family: 'Consolas', 'Fira Code', monospace; font-size: 13px; }
-
-    /* Keyframe Animations */
-    @keyframes floatOrb1 {
-      0%, 100% { transform: translate(0px, 0px) scale(1); }
-      50% { transform: translate(35px, -18px) scale(1.1); }
-    }
-    @keyframes floatOrb2 {
-      0%, 100% { transform: translate(0px, 0px) scale(1); }
-      50% { transform: translate(-30px, 20px) scale(1.08); }
-    }
-    @keyframes floatOrb3 {
-      0%, 100% { transform: translate(0px, 0px); }
-      50% { transform: translate(20px, 15px); }
-    }
-    @keyframes pulseRing {
-      0%, 100% { transform: scale(1); opacity: 0.35; }
-      50% { transform: scale(1.05); opacity: 0.8; }
-    }
-    @keyframes rotateDash {
-      0% { stroke-dashoffset: 0; }
-      100% { stroke-dashoffset: 60; }
-    }
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.2; }
-    }
-    @keyframes sheenSweep {
-      0% { transform: translateX(-400px) skewX(-20deg); }
-      50%, 100% { transform: translateX(900px) skewX(-20deg); }
-    }
-
-    .anim-orb-1 { animation: floatOrb1 8s ease-in-out infinite; }
-    .anim-orb-2 { animation: floatOrb2 10s ease-in-out infinite; }
-    .anim-orb-3 { animation: floatOrb3 7s ease-in-out infinite; }
-    .anim-ring {
-      transform-origin: 65px 65px;
-      animation: rotateDash 12s linear infinite;
-    }
-    .anim-pulse-dot {
-      animation: blink 1.6s ease-in-out infinite;
-    }
-    .anim-sheen {
-      animation: sheenSweep 6s ease-in-out infinite;
-    }
+    .serif { font-family: Georgia, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif; }
+    .tw { animation: tw 3s ease-in-out infinite; }
+    .tw2 { animation: tw 4.5s ease-in-out infinite 1s; }
+    .tw3 { animation: tw 2.4s ease-in-out infinite 0.6s; }
+    @keyframes tw { 0%,100% { opacity: 0.25; } 50% { opacity: 1; } }
+    .flicker { animation: flick 1.8s ease-in-out infinite; }
+    .flicker2 { animation: flick 2.3s ease-in-out infinite 0.4s; }
+    @keyframes flick { 0%,100% { opacity: 1; } 30% { opacity: 0.72; } 55% { opacity: 0.95; } 75% { opacity: 0.8; } }
+    .flame { transform-box: fill-box; transform-origin: 50% 100%; animation: flame 0.5s ease-in-out infinite alternate; }
+    @keyframes flame { from { transform: scale(1,1); } to { transform: scale(0.85,1.2); } }
+    .cloud { animation: drift 60s linear infinite; }
+    .cloud2 { animation: drift 85s linear infinite -30s; }
+    @keyframes drift { from { transform: translateX(-260px); } to { transform: translateX(900px); } }
   </style>
 
-  <!-- Deep Canvas -->
-  <rect width="850" height="340" rx="24" fill="url(#space-bg)"/>
+  <!-- Sky -->
+  <rect width="850" height="360" fill="url(#sky)"/>
 
-  <!-- Animated Glowing Ambient Light Spheres (Behind Glass) -->
-  <g class="anim-orb-1">
-    <circle cx="150" cy="100" r="140" fill="url(#orb-orange-1)" opacity="0.65"/>
-  </g>
-  <g class="anim-orb-2">
-    <circle cx="730" cy="190" r="160" fill="url(#orb-orange-2)" opacity="0.55"/>
-  </g>
-  <g class="anim-orb-3">
-    <circle cx="450" cy="300" r="120" fill="url(#orb-gold)" opacity="0.4"/>
-  </g>
-
-  <!-- Main Floating Glassmorphic Panel -->
-  <g filter="url(#card-shadow)">
-    <rect x="20" y="20" width="810" height="300" rx="22" fill="url(#glass-fill)"/>
-    <rect x="20" y="20" width="810" height="300" rx="22" stroke="url(#glass-border)" stroke-width="1.5"/>
+  <!-- Stars -->
+  <g fill="#fff6dc">
+    <circle class="tw" cx="40" cy="30" r="1.2"/><circle class="tw2" cx="95" cy="62" r="0.9"/>
+    <circle class="tw3" cx="150" cy="22" r="1.4"/><circle class="tw" cx="210" cy="48" r="0.8"/>
+    <circle class="tw2" cx="260" cy="18" r="1.1"/><circle class="tw3" cx="318" cy="40" r="0.9"/>
+    <circle class="tw" cx="360" cy="14" r="1.3"/><circle class="tw2" cx="505" cy="26" r="1"/>
+    <circle class="tw3" cx="560" cy="58" r="1.3"/><circle class="tw" cx="600" cy="16" r="0.9"/>
+    <circle class="tw2" cx="720" cy="30" r="1.2"/><circle class="tw3" cx="770" cy="70" r="0.8"/>
+    <circle class="tw" cx="815" cy="22" r="1.4"/><circle class="tw2" cx="455" cy="110" r="0.8"/>
+    <circle class="tw3" cx="20" cy="95" r="0.9"/><circle class="tw" cx="842" cy="110" r="0.9"/>
+    <circle class="tw2" cx="700" cy="92" r="0.7"/><circle class="tw3" cx="480" cy="70" r="0.7"/>
   </g>
 
-  <!-- Animated Specular Light Sheen across Glass -->
-  <g clip-path="url(#glass-clip)">
-    <clipPath id="glass-clip">
-      <rect x="20" y="20" width="810" height="300" rx="22"/>
-    </clipPath>
-    <rect class="anim-sheen" x="0" y="20" width="180" height="300" fill="url(#shimmer-grad)" opacity="0.3"/>
+  <!-- Moon -->
+  <circle cx="432" cy="62" r="70" fill="url(#moon-glow)"/>
+  <circle cx="432" cy="62" r="24" fill="#f6e7c1"/>
+  <circle cx="424" cy="56" r="4" fill="#e3cf9f"/>
+  <circle cx="440" cy="70" r="5.5" fill="#e3cf9f"/>
+  <circle cx="438" cy="52" r="2.5" fill="#e3cf9f"/>
+
+  <!-- Drifting clouds -->
+  <g class="cloud" fill="#c8c3d8" opacity="0.12">
+    <ellipse cx="80" cy="90" rx="70" ry="12"/><ellipse cx="110" cy="82" rx="40" ry="10"/>
+  </g>
+  <g class="cloud2" fill="#c8c3d8" opacity="0.09">
+    <ellipse cx="60" cy="40" rx="90" ry="10"/><ellipse cx="95" cy="33" rx="45" ry="9"/>
   </g>
 
-  <!-- Left: Glowing Holographic Avatar Glass Circle -->
-  <g transform="translate(55, 75)">
-    <!-- Rotating Dashed Orbit Ring -->
-    <circle cx="65" cy="65" r="74" fill="none" stroke="#FFA726" stroke-width="1.5" stroke-dasharray="10 8" class="anim-ring" opacity="0.6"/>
-    <!-- Outer Glass Ring -->
-    <circle cx="65" cy="65" r="64" fill="#1A0D06" fill-opacity="0.6"/>
-    <circle cx="65" cy="65" r="64" stroke="url(#glass-border)" stroke-width="2"/>
-    
-    <!-- Stylized Q Hologram Monogram -->
-    <path d="M 65 35 C 50 35, 40 47, 40 65 C 40 83, 50 95, 65 95 C 72 95, 78 92, 83 86 L 91 94 L 97 88 L 88 80 C 91 76, 93 70, 93 65 C 93 47, 80 35, 65 35 Z M 65 48 C 74 48, 80 55, 80 65 C 80 75, 74 82, 65 82 C 56 82, 50 75, 50 65 C 50 55, 56 48, 65 48 Z" fill="url(#text-glow)" filter="url(#soft-glow)"/>
+  <!-- Distant mountains & hills -->
+  <path d="M0 250L70 190L120 225L190 160L260 230L330 185L400 240L470 180L540 220L620 170L700 215L770 175L850 225V300H0Z" fill="#141a30"/>
+  <path d="M0 275Q110 240 220 268T440 262T660 258T850 262V300H0Z" fill="#1c1d2c"/>
 
-    <!-- Mini Live Status Badge on Avatar -->
-    <circle cx="108" cy="110" r="11" fill="#140A05" stroke="#FF7A00" stroke-width="1.5"/>
-    <circle cx="108" cy="110" r="6" fill="#00E676" class="anim-pulse-dot"/>
-  </g>
+  <!-- ==================== CASTLE ==================== -->
+  <g>
+    <!-- curtain wall -->
+    <rect x="470" y="225" width="360" height="75" fill="url(#bricks)"/>
+    <rect x="470" y="215" width="364" height="10" fill="url(#merlons)"/>
 
-  <!-- Right: Header Content -->
-  <g transform="translate(235, 70)">
-    <!-- Status / Role Pill -->
-    <g transform="translate(0, 0)">
-      <rect x="0" y="0" width="230" height="28" rx="14" fill="#FF6A00" fill-opacity="0.12" stroke="#FF8A00" stroke-width="1" stroke-opacity="0.45"/>
-      <circle cx="14" cy="14" r="4" fill="#FF8A00" class="anim-pulse-dot" filter="url(#soft-glow)"/>
-      <text x="26" y="18" class="badge-text" fill="#FFA726" letter-spacing="0.5">FULL-STACK DEVELOPER</text>
-      <text x="185" y="18" class="badge-text" fill="#D7C4B7">● 2026</text>
+    <!-- wall guards -->
+    <use href="#guard" transform="translate(560 225)"/>
+    <use href="#guard" transform="translate(742 225)"/>
+
+    <!-- left tower -->
+    <rect x="490" y="140" width="56" height="160" fill="url(#bricks)"/>
+    <path d="M484 141L518 72L552 141Z" fill="url(#roof)"/>
+    <use href="#flag" transform="translate(518 48)"/>
+
+    <!-- right tower -->
+    <rect x="760" y="130" width="56" height="170" fill="url(#bricks)"/>
+    <path d="M754 131L788 58L822 131Z" fill="url(#roof)"/>
+    <use href="#flag" transform="translate(788 34)"/>
+
+    <!-- keep -->
+    <rect x="590" y="150" width="130" height="150" fill="url(#bricks)"/>
+    <rect x="590" y="140" width="134" height="10" fill="url(#merlons)"/>
+
+    <!-- central tower -->
+    <rect x="628" y="80" width="54" height="70" fill="url(#bricks)"/>
+    <path d="M621 81L655 24L689 81Z" fill="url(#roof)"/>
+    <use href="#flag" transform="translate(655 0)"/>
+
+    <!-- shading -->
+    <rect x="470" y="140" width="360" height="160" fill="url(#shade)"/>
+
+    <!-- gate -->
+    <path d="M628 300V262A27 27 0 0 1 682 262V300Z" fill="#2a2420" stroke="#55493a" stroke-width="3"/>
+    <path d="M633 300V263A22 22 0 0 1 677 263V300Z" fill="url(#portcullis)"/>
+
+    <!-- lit windows -->
+    <g fill="#ffb347" filter="url(#glow)">
+      <use href="#win" class="flicker" transform="translate(518 165)"/>
+      <use href="#win" class="flicker2" transform="translate(518 205)"/>
+      <use href="#win" class="flicker2" transform="translate(788 160)"/>
+      <use href="#win" class="flicker" transform="translate(788 200)"/>
+      <use href="#win" class="flicker" transform="translate(612 182)"/>
+      <use href="#win" class="flicker2" transform="translate(698 182)"/>
+      <use href="#win" class="flicker2" transform="translate(655 100)"/>
     </g>
 
-    <!-- Main Name Heading with Gradient -->
-    <text x="0" y="70" class="title-text" fill="url(#text-glow)">
-      Quân <tspan fill="#FF7B1A" font-weight="300">|</tspan> qu2nishere
-    </text>
+    <!-- gate torches -->
+    <circle cx="614" cy="258" r="22" fill="url(#torch-glow)" class="flicker"/>
+    <circle cx="696" cy="258" r="22" fill="url(#torch-glow)" class="flicker2"/>
+    <rect x="612" y="258" width="4" height="14" fill="#5c4a30"/>
+    <rect x="694" y="258" width="4" height="14" fill="#5c4a30"/>
+    <path class="flame" d="M614 259Q608 252 614 242Q620 252 614 259Z" fill="#ffcf5a"/>
+    <path class="flame" d="M696 259Q690 252 696 242Q702 252 696 259Z" fill="#ffcf5a"/>
+  </g>
 
-    <!-- Subtitle / Bio -->
-    <text x="0" y="105" class="subtitle-text">
-      Crafting modern high-speed web apps &amp; sleek glassmorphic digital experiences.
-    </text>
+  <!-- Ground & road -->
+  <path d="M0 300H850V360H0Z" fill="#17130f"/>
+  <path d="M0 300H850V304H0Z" fill="#2a2418"/>
+  <path d="M0 322H850V346H0Z" fill="#221c15"/>
+  <g fill="#2e261c">
+    <rect x="30" y="331" width="14" height="3" rx="1.5"/><rect x="160" y="337" width="10" height="3" rx="1.5"/>
+    <rect x="300" y="329" width="16" height="3" rx="1.5"/><rect x="450" y="338" width="12" height="3" rx="1.5"/>
+    <rect x="590" y="330" width="14" height="3" rx="1.5"/><rect x="740" y="336" width="10" height="3" rx="1.5"/>
+  </g>
 
-    <!-- Modern Glass Floating Chips -->
-    <g transform="translate(0, 134)">
-      <!-- Chip 1 -->
-      <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="135" height="34" rx="10" fill="#FFFFFF" fill-opacity="0.05" stroke="url(#glass-border)" stroke-width="1"/>
-        <text x="14" y="21" class="badge-text" fill="#FFB74D">⚡ Clean Code</text>
-      </g>
-      <!-- Chip 2 -->
-      <g transform="translate(147, 0)">
-        <rect x="0" y="0" width="150" height="34" rx="10" fill="#FFFFFF" fill-opacity="0.05" stroke="url(#glass-border)" stroke-width="1"/>
-        <text x="14" y="21" class="badge-text" fill="#FFB74D">🎨 Modern UI/UX</text>
-      </g>
-      <!-- Chip 3 -->
-      <g transform="translate(309, 0)">
-        <rect x="0" y="0" width="135" height="34" rx="10" fill="#FFFFFF" fill-opacity="0.05" stroke="url(#glass-border)" stroke-width="1"/>
-        <text x="14" y="21" class="badge-text" fill="#FFB74D">🚀 Fast Builder</text>
-      </g>
-    </g>
+  <!-- ==================== MARCHING ARMY ==================== -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="-260 0;900 0" dur="24s" begin="-10s" repeatCount="indefinite"/>
+    <use href="#bearer" transform="translate(200 340) scale(0.9)"/>
+    <use href="#soldier" transform="translate(166 340) scale(0.9)"/>
+    <use href="#soldier" transform="translate(134 340) scale(0.9)"/>
+    <use href="#soldier" transform="translate(102 340) scale(0.9)"/>
+    <use href="#soldier" transform="translate(70 340) scale(0.9)"/>
+    <use href="#soldier" transform="translate(38 340) scale(0.9)"/>
+    <use href="#bearer" transform="translate(6 340) scale(0.9)"/>
+  </g>
 
-    <!-- Terminal Status Line -->
-    <g transform="translate(0, 198)">
-      <text x="0" y="0" class="code-font" fill="#8C786C">
-        <tspan fill="#FF7A00">&gt;</tspan> echo <tspan fill="#FFE0B2">"Turning coffee &amp; passion into code"</tspan> <tspan fill="#FF7A00" class="anim-pulse-dot">_</tspan>
-      </text>
-    </g>
+  <!-- ==================== TITLE ==================== -->
+  <g class="serif">
+    <text x="44" y="78" font-size="12" letter-spacing="5" fill="#c9a227">✦ HEAR YE, HEAR YE ✦</text>
+    <text x="40" y="140" font-size="58" font-weight="700" fill="url(#gold)" filter="url(#title-shadow)" letter-spacing="1">Sir Quân</text>
+    <text x="44" y="172" font-size="20" font-style="italic" fill="#e8d5a8">of House <tspan fill="#f1c75b" font-style="normal" font-weight="700">qu2nishere</tspan></text>
+
+    <!-- ribbon -->
+    <path d="M30 192H48V222H30L38 207Z" fill="#5e1010"/>
+    <path d="M412 192H394V222H412L404 207Z" fill="#5e1010"/>
+    <path d="M44 186H398V216H44Z" fill="#8b1a1a" stroke="#e6b84a" stroke-width="1.5"/>
+    <path d="M44 216L48 222V216ZM398 216L394 222V216Z" fill="#3a0808"/>
+    <text x="221" y="206" text-anchor="middle" font-size="11.5" font-weight="700" letter-spacing="1.4" fill="#f6e2a6">FULL-STACK DEVELOPER · KNIGHT OF CODE</text>
+
+    <text x="44" y="258" font-size="14.5" font-style="italic" fill="#cdbb95">“Forging clean code in the fires of 2026”</text>
   </g>
 </svg>

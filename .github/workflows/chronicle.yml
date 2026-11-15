@@ -1,0 +1,43 @@
+name: Update War Chronicle
+
+on:
+  schedule:
+    - cron: "17 */6 * * *" # every 6 hours
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/chronicle.py"
+      - ".github/workflows/chronicle.yml"
+
+concurrency:
+  group: chronicle
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Render medieval stat SVGs from live contribution data
+        env:
+          # Optional: add a CHRONICLE_TOKEN secret (classic PAT with read:user) to include private contributions.
+          GH_TOKEN: ${{ secrets.CHRONICLE_TOKEN || secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+        run: python3 scripts/chronicle.py
+
+      - name: Commit updated assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/war-chronicle.svg assets/battle-ledger.svg assets/battle-activity.svg
+          if git diff --cached --quiet; then
+            echo "No changes in the chronicle."
+          else
+            git commit -m "chore: update war chronicle"
+            git pull --rebase
+            git push
+          fi
