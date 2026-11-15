@@ -173,6 +173,59 @@ ARMY_DEFS = """
 """
 
 
+DRAGON_DEFS = """
+    <linearGradient id="dragon-fire" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#fff3c4"/><stop offset="35%" stop-color="#ffb347"/>
+      <stop offset="75%" stop-color="#ff5a1f"/><stop offset="100%" stop-color="#c62828" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="dragon-belly" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7a1c1c"/><stop offset="100%" stop-color="#c0742e"/>
+    </linearGradient>
+    <!-- dragon facing left, origin at the shoulder -->
+    <g id="dragon">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="0.9s" repeatCount="indefinite"/>
+        <!-- far wing -->
+        <g transform="translate(4 -4)">
+          <path d="M0 0L12 -44L20 -38L27 -48Q31 -28 42 -32Q37 -17 47 -13Q28 -7 22 -1Z" fill="#3e0d0d">
+            <animateTransform attributeName="transform" type="scale" values="1 1;1 -0.35;1 1" dur="0.9s" begin="0.08s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        <!-- tail -->
+        <path d="M44 0Q70 4 86 -4Q100 -12 112 -8L121 -13L117 -4L123 1L112 -3Q100 -5 88 3Q70 12 44 8Z" fill="#5a1414">
+          <animateTransform attributeName="transform" type="rotate" values="-3 44 4;4 44 4;-3 44 4" dur="1.8s" repeatCount="indefinite"/>
+        </path>
+        <!-- legs tucked -->
+        <path d="M6 8L10 16L16 17L12 9Z M28 6L34 14L40 14L34 5Z" fill="#4a1010"/>
+        <!-- body -->
+        <path d="M-30 0Q-10 -13 20 -7Q40 -3 50 3Q30 11 0 11Q-20 11 -30 0Z" fill="url(#dragon-belly)"/>
+        <path d="M-24 -4Q-4 -12 20 -7Q38 -3 48 2Q30 0 0 -2Q-14 -2 -24 -4Z" fill="#5a1414"/>
+        <path d="M-14 -8L-11 -14L-8 -9L-4 -15L-1 -10L3 -15L6 -9L10 -14L12 -8" fill="#3a0a0a"/>
+        <!-- neck & head -->
+        <path d="M-27 -2Q-42 -14 -55 -15L-64 -13L-72 -9L-64 -6L-71 -3L-58 -3Q-45 -2 -25 6Z" fill="#6b1818"/>
+        <path d="M-56 -15L-49 -26L-52 -14Z M-50 -14L-42 -22L-46 -12Z" fill="#d9c49a"/>
+        <circle cx="-62" cy="-11" r="1.6" fill="#ffd54a"/>
+        <!-- near wing -->
+        <path d="M0 -2L14 -48L22 -42L30 -52Q34 -30 46 -34Q40 -18 50 -14Q30 -8 24 -2Z" fill="#7a1c1c" stroke="#3a0a0a" stroke-width="1">
+          <animateTransform attributeName="transform" type="scale" values="1 1;1 -0.35;1 1" dur="0.9s" repeatCount="indefinite"/>
+        </path>
+      </g>
+      <!-- fire breath (only for a moment each pass) -->
+      <path d="M-70 -6Q-88 -16 -112 -10Q-98 -6 -116 -1Q-96 1 -112 8Q-90 6 -70 -3Z" fill="url(#dragon-fire)" opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.11;0.12;0.17;0.18;1" dur="28s" repeatCount="indefinite"/>
+      </path>
+    </g>
+"""
+
+
+def dragon(y, scale=0.85, dur=28):
+    """A dragon crossing right-to-left during the first ~30% of each cycle, then out of sight."""
+    return f"""<g>
+      <animateTransform attributeName="transform" type="translate" values="920 {y};-160 {y - 30};-160 {y - 30}" keyTimes="0;0.3;1" dur="{dur}s" repeatCount="indefinite"/>
+      <g transform="scale({scale})"><use href="#dragon"/></g>
+    </g>"""
+
+
 def army(y, scale, dur, begin, span=(-240, 880)):
     members = [("soldier", 200), ("soldier", 172), ("archer", 144), ("soldier", 116),
                ("archer", 88), ("soldier", 60), ("soldier", 32), ("soldier", 4)]
@@ -368,7 +421,7 @@ def battle_activity(cal, updated):
       <stop offset="0%" stop-color="#0b1022"/><stop offset="70%" stop-color="#2a2340"/><stop offset="100%" stop-color="#5a3528"/>
     </linearGradient>
     <clipPath id="scene"><rect x="18" y="12" width="814" height="232" rx="6"/></clipPath>
-    {ARMY_DEFS}
+    {ARMY_DEFS}{DRAGON_DEFS}
   </defs>
   <style>{STYLE}</style>
   {frame(w, h)}
@@ -384,6 +437,7 @@ def battle_activity(cal, updated):
     <text x="680" y="40" class="serif" font-size="11" letter-spacing="2" fill="#e8d5a8">WATCHTOWER LIVE</text>
     <path d="M18 {base}Q200 188 425 192T832 190V244H18Z" fill="#1c1d2c"/>
     {''.join(towers)}
+    {dragon(120)}
     <rect x="18" y="{base}" width="814" height="48" fill="#17130f"/>
     <rect x="18" y="{base}" width="814" height="3" fill="#2a2418"/>
     <rect x="18" y="214" width="814" height="26" fill="#221c15"/>
