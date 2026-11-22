@@ -45,7 +45,7 @@
     <path d="M46 78H210V206L128 236L46 206Z" fill="#7a1414" filter="url(#drop)"/>
     <path d="M52 84H204V203L128 229L52 203Z" stroke="#e6b84a" stroke-width="1.2"/>
     <g transform="translate(128 108)"><g stroke-width="2.5" stroke-linecap="round"><path d="M-11 -11L11 11M11 -11L-11 11" stroke="#d9dde4"/><path d="M-13 5L-5 13M13 5L5 13" stroke="#e6b84a"/></g></g>
-    <text x="128" y="156" text-anchor="middle" class="serif" font-weight="700" font-size="34" fill="url(#gold)">340</text>
+    <text x="128" y="156" text-anchor="middle" class="serif" font-weight="700" font-size="34" fill="url(#gold)">346</text>
     <text x="128" y="180" text-anchor="middle" class="serif" font-weight="700" font-size="10.5" letter-spacing="1.2" fill="#f6e2a6">BATTLES WAGED</text>
     <text x="128" y="198" text-anchor="middle" class="serif" font-style="italic" font-size="11" fill="#d8c49a">Deeds since 2024</text>
   </g>
@@ -55,9 +55,9 @@
     <path d="M244 78H408V206L326 236L244 206Z" fill="#1c2f6e" filter="url(#drop)"/>
     <path d="M250 84H402V203L326 229L250 203Z" stroke="#e6b84a" stroke-width="1.2"/>
     <g transform="translate(326 108)"><path d="M0 13Q-11 8 -8 -2Q-5 -9 0 -14Q1 -6 6 -3Q10 2 7 8Q5 12 0 13Z" fill="#ff8f2e"/><path d="M0 13Q-5 9 -3 3Q-1 -1 1 -4Q2 2 4 4Q5 9 0 13Z" fill="#ffd36b"/></g>
-    <text x="326" y="156" text-anchor="middle" class="serif" font-weight="700" font-size="34" fill="url(#gold)">3<tspan font-size="15" fill="#e8d5a8" font-weight="400"> Days</tspan></text>
+    <text x="326" y="156" text-anchor="middle" class="serif" font-weight="700" font-size="34" fill="url(#gold)">4<tspan font-size="15" fill="#e8d5a8" font-weight="400"> Days</tspan></text>
     <text x="326" y="180" text-anchor="middle" class="serif" font-weight="700" font-size="10.5" letter-spacing="1.2" fill="#f6e2a6">CURRENT CAMPAIGN</text>
-    <text x="326" y="198" text-anchor="middle" class="serif" font-style="italic" font-size="11" fill="#d8c49a">Nov 19 – Nov 21</text>
+    <text x="326" y="198" text-anchor="middle" class="serif" font-style="italic" font-size="11" fill="#d8c49a">Nov 19 – Nov 22</text>
   </g>
   
   <g>
@@ -75,7 +75,7 @@
     <path d="M640 78H804V206L722 236L640 206Z" fill="#1c2f6e" filter="url(#drop)"/>
     <path d="M646 84H798V203L722 229L646 203Z" stroke="#e6b84a" stroke-width="1.2"/>
     <g transform="translate(722 108)"><path d="M-12 8V-6L-6 0L0 -10L6 0L12 -6V8Z" fill="#e6b84a" stroke="#9c6b1c"/><rect x="-12" y="8" width="24" height="4" fill="#c9a227"/><circle cy="3" r="2" fill="#b71c1c"/></g>
-    <text x="722" y="156" text-anchor="middle" class="serif" font-weight="700" font-size="34" fill="url(#gold)">290</text>
+    <text x="722" y="156" text-anchor="middle" class="serif" font-weight="700" font-size="34" fill="url(#gold)">296</text>
     <text x="722" y="180" text-anchor="middle" class="serif" font-weight="700" font-size="10.5" letter-spacing="1.2" fill="#f6e2a6">2026 CONQUESTS</text>
     <text x="722" y="198" text-anchor="middle" class="serif" font-style="italic" font-size="11" fill="#d8c49a">Deeds this year</text>
   </g>
