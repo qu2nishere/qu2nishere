@@ -34,7 +34,7 @@
   <rect x="10" y="4" width="830" height="252" rx="10" stroke="#c9a227" stroke-opacity="0.55" stroke-width="2"/>
   <rect x="16" y="10" width="818" height="240" rx="7" stroke="#5a4510" stroke-width="1"/>
   <text x="425" y="40" text-anchor="middle" class="serif" font-weight="700" font-size="20" letter-spacing="5" fill="url(#gold)">WAR CHRONICLE</text>
-  <text x="425" y="58" text-anchor="middle" class="serif" font-size="10.5" letter-spacing="3" fill="#a8977a">ROYAL ARCHIVES · UPDATED NOV 26, 2026</text>
+  <text x="425" y="58" text-anchor="middle" class="serif" font-size="10.5" letter-spacing="3" fill="#a8977a">ROYAL ARCHIVES · UPDATED NOV 27, 2026</text>
   <path d="M250 35H320M530 35H600" stroke="#c9a227" stroke-opacity="0.6"/>
   <path d="M244 35L249 30L254 35L249 40ZM596 35L601 30L606 35L601 40Z" fill="#c9a227"/>
   <rect x="34" y="72" width="782" height="6" rx="3" fill="#5a3a1c"/>
